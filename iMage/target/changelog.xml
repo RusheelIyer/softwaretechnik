@@ -1,4 +1,10 @@
 <changelog><commit>
+					<time>1525162822</time>
+					<sha1>a929afe5d1205e7afd1292732717f14277842ab0</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>main class file name error</msg>
+				</commit><commit>
 					<time>1525162554</time>
 					<sha1>2396113269a4ec743dd84d984f50744fa4f3be7b</sha1>
 					<author>Rusheel</author>

@@ -26,7 +26,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>org.jis.Main</mainClass>
+              <mainClass>org.jis.Main.java</mainClass>
               <addClasspath>true</addClasspath>
               <addDefaultImplementationEntries>
               true
