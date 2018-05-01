@@ -9,6 +9,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+import org.jis.options.Options;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -82,6 +83,72 @@ public class GeneratorTest2 {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	/**
+	 * Test the generateImage method with quality modus
+	 */
+	@Test
+	public void generateImageTestModusQuality() {
+		Options.getInstance().setModus(Options.MODUS_QUALITY);
+		Options.getInstance().setAntialiasing(false);
+		Options.getInstance().setCopyMetadata(false);
+		Options.getInstance().setCopyright(false);
+		
+		try {
+			File fo = generator.generateImage(imageFile, fileOut, true, 
+					image.getWidth() / 2, image.getHeight() / 2, "portraitScale");
+			BufferedImage scaledImage = ImageIO.read(fo);
+			assertEquals(image.getHeight() / 2, scaledImage.getHeight());
+			assertEquals(image.getWidth() / 2, scaledImage.getWidth());
+			fo.delete();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
+	}
+	
+	/**
+	 * Test the generateImage method with speed modus
+	 */
+	@Test
+	public void generateImageTestModusSpeed() {
+		Options.getInstance().setModus(Options.MODUS_SPEED);
+		Options.getInstance().setAntialiasing(false);
+		Options.getInstance().setCopyMetadata(false);
+		Options.getInstance().setCopyright(false);
+		
+		try {
+			File fo = generator.generateImage(imageFile, fileOut, true, 
+					image.getWidth() / 2, image.getHeight() / 2, "portraitScale");
+			BufferedImage scaledImage = ImageIO.read(fo);
+			assertEquals(image.getHeight() / 2, scaledImage.getHeight());
+			assertEquals(image.getWidth() / 2, scaledImage.getWidth());
+			fo.delete();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
+	}
+	
+	/**
+	 * Test the generateImage method with default modus
+	 */
+	@Test
+	public void generateImageTestModusDefault() {
+		Options.getInstance().setModus(Options.MODUS_DEFAULT);
+		Options.getInstance().setAntialiasing(true);
+		Options.getInstance().setCopyMetadata(false);
+		Options.getInstance().setCopyright(true);
+		
+		try {
+			File fo = generator.generateImage(imageFile, fileOut, true, 
+					image.getWidth() / 2, image.getHeight() / 2, "portraitScale");
+			BufferedImage scaledImage = ImageIO.read(fo);
+			assertEquals(image.getHeight() / 2, scaledImage.getHeight());
+			assertEquals(image.getWidth() / 2, scaledImage.getWidth());
+			fo.delete();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}	
 	}
 
 }
