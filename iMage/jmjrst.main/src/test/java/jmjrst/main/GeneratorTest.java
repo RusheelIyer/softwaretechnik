@@ -1,6 +1,7 @@
 package jmjrst.main;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -51,6 +52,17 @@ public class GeneratorTest {
 		assertTrue(generator.rotateImage(null, 0.0) == null);
 	}
 	
-	
+	/**
+	 * test that the rotateImage method doesn't accept illegal rotate values
+	 */
+	@Test
+	public void illegalRotateImageTest() {
+		try {
+			generator.rotateImage(image, 0.5);
+			fail("An IllegalArgumentExcpetion should be thrown");
+		} catch (IllegalArgumentException e) {
+
+		}
+	}
 
 }
