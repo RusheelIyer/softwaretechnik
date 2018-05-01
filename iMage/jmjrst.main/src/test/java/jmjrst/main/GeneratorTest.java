@@ -6,10 +6,14 @@ import static org.junit.Assert.fail;
 
 import java.awt.image.BufferedImage;
 import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import javax.imageio.ImageIO;
 
 import org.jis.generator.Generator;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -116,6 +120,26 @@ public class GeneratorTest {
 			}
 		} else {
 			fail("Height and width of new image does not correspond with original image");
+		}
+	}
+	
+	/**
+	 * Store changed image after each test
+	 */
+	@After
+	public void tearDown() {
+		SimpleDateFormat storeFormat = new SimpleDateFormat("HHmmss_SSS");
+		String time = storeFormat.format(new Date());
+		
+		File outputFile = new File("target/dataTest/rotatedPicture_" + time + ".jpg");
+		
+		if (newImage != null) {
+			try {
+				outputFile.createNewFile(); //does nothing if file already exists
+				ImageIO.write(newImage, "jpg", outputFile);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 
