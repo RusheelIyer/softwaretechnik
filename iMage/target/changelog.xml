@@ -1,4 +1,10 @@
 <changelog><commit>
+					<time>1525163622</time>
+					<sha1>eff6be9ac22db0a6d1ea8bad21dccb53c5addd8c</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Fixed File Structure</msg>
+				</commit><commit>
 					<time>1525163363</time>
 					<sha1>fc5f0a01846474507833b7f96b31b32e683c1da6</sha1>
 					<author>Rusheel</author>
