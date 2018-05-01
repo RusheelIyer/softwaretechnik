@@ -53,5 +53,35 @@ public class GeneratorTest2 {
 			e.printStackTrace();
 		}
 	}
+	
+	/**
+	 * Test that a landscape image is scaled correctly
+	 */
+	@Test
+	public void generateImageTestLandscape() {
+		File fo;
+		try {
+			File testFile = new File("src/test/resources/testPicture.jpg");
+			//rotate image if it's portrait before method is run
+			if (image.getWidth() < image.getHeight()) {
+				ImageIO.write(generator.rotateImage(image, Math.toRadians(90)), "jpg", testFile);
+				image = ImageIO.read(testFile);
+				fo = generator.generateImage(testFile, fileOut, true, 
+						image.getWidth() / 2, image.getHeight() / 2, "landscapeScale");
+				BufferedImage scaledImage = ImageIO.read(fo);
+				assertEquals(image.getHeight() / 2, scaledImage.getHeight());
+				assertEquals(image.getWidth() / 2, scaledImage.getWidth());
+			} else {
+				fo = generator.generateImage(imageFile, fileOut, true, 
+						image.getWidth() / 2, image.getHeight() / 2, "landscapeScale");
+				BufferedImage scaledImage = ImageIO.read(fo);
+				assertEquals(image.getHeight() / 2, scaledImage.getHeight());
+				assertEquals(image.getWidth() / 2, scaledImage.getWidth());
+			}
+			fo.delete();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 
 }
