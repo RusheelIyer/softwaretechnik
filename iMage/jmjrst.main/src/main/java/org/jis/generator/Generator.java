@@ -67,6 +67,10 @@ import org.jis.options.Options;
  */
 public class Generator {
   public final static double ROTATE_90  = Math.toRadians(90);
+  /**
+   * constant radian value of 180 degrees
+   */
+  public final static double ROTATE_180 = Math.toRadians(180);
   public final static double ROTATE_270 = Math.toRadians(270);
 
   private Main               m;
@@ -737,8 +741,10 @@ public class Generator {
       transform.rotate(Generator.ROTATE_270);
       width = image.getHeight(null); // swap
       height = image.getWidth(null);
-    }
-    else
+    } else if (rotate == Generator.ROTATE_180) {
+    	transform.translate(width, height);
+    	transform.rotate(Generator.ROTATE_180);
+    } else
     {
       throw new IllegalArgumentException("degree must be a mutiple of 90�!");
     }

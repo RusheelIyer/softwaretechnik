@@ -100,5 +100,23 @@ public class GeneratorTest {
 			fail("Height and width of new image does not correspond with original image");
 		}
 	}
+	
+	/**
+	 * test rotations by 180 degrees
+	 */
+	@Test
+	public void rotateImage180Test() {
+		newImage = generator.rotateImage(image, Math.PI);
+		if ((image.getWidth() == newImage.getWidth()) && (image.getHeight() == newImage.getHeight())) {
+			for (int x = 0; x < image.getHeight(); x++) {
+				for (int y = 0; y < image.getWidth(); y++) {
+					assertEquals(image.getRGB(y, x), 
+							newImage.getRGB((image.getWidth() - 1) - y, (image.getHeight() - 1) - x));
+				}
+			}
+		} else {
+			fail("Height and width of new image does not correspond with original image");
+		}
+	}
 
 }
