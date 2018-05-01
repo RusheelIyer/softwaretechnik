@@ -1,5 +1,6 @@
 package jmjrst.main;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
@@ -21,6 +22,7 @@ public class GeneratorTest {
 
 	private Generator generator;
 	private BufferedImage image;
+	private BufferedImage newImage = null;
 	
 	/**
 	 * set up before each test case
@@ -62,6 +64,40 @@ public class GeneratorTest {
 			fail("An IllegalArgumentExcpetion should be thrown");
 		} catch (IllegalArgumentException e) {
 
+		}
+	}
+	
+	/**
+	 * test rotations by 90 degrees
+	 */
+	@Test
+	public void rotateImage90Test() {
+		newImage = generator.rotateImage(image, Math.PI / 2);
+		if ((image.getWidth() == newImage.getHeight()) && (image.getHeight() == newImage.getWidth())) {
+			for (int x = 0; x < image.getHeight(); x++) {
+				for (int y = 0; y < image.getWidth(); y++) {
+					assertEquals(image.getRGB(y, x), newImage.getRGB((image.getHeight() - 1) - x, y));
+				}
+			}
+		} else {
+			fail("Height and width of new image does not correspond with original image");
+		}
+	}
+
+	/**
+	 * test rotations by 270 degrees
+	 */
+	@Test
+	public void rotateImage270Test() {
+		newImage = generator.rotateImage(image, 3 * Math.PI / 2);
+		if ((image.getWidth() == newImage.getHeight()) && (image.getHeight() == newImage.getWidth())) {
+			for (int x = 0; x < image.getHeight(); x++) {
+				for (int y = 0; y < image.getWidth(); y++) {
+					assertEquals(image.getRGB(y, x), newImage.getRGB(x, (image.getWidth() - 1) - y));
+				}
+			}
+		} else {
+			fail("Height and width of new image does not correspond with original image");
 		}
 	}
 
