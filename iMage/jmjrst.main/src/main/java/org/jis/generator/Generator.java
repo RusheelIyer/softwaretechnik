@@ -124,9 +124,12 @@ public class Generator {
         selected.get(i).delete();
       }
       out.close();
-    } catch (IllegalArgumentException iae) {
+    }
+    catch (IllegalArgumentException iae)
+    {
       iae.printStackTrace();
-    } catch (FileNotFoundException fnfe)
+    }
+    catch (FileNotFoundException fnfe)
     {
       fnfe.printStackTrace();
     }

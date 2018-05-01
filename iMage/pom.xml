@@ -18,26 +18,4 @@
   <modules>
   	<module>jmjrst.main</module>
   </modules>
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <configuration>
-          <archive>
-            <manifest>
-              <mainClass>org.jis.Main.java</mainClass>
-              <addClasspath>true</addClasspath>
-              <addDefaultImplementationEntries>
-              true
-              </addDefaultImplementationEntries>
-              <addDefaultSpecificationEntries>
-              true
-              </addDefaultSpecificationEntries>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>
