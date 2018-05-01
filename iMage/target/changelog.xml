@@ -1,4 +1,34 @@
 <changelog><commit>
+					<time>1525180224</time>
+					<sha1>88a5289743844341badbd468b59511993a12ef3a</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>test other rotate methods using file as argument</msg>
+				</commit><commit>
+					<time>1525179892</time>
+					<sha1>1f3fe5cd22d49129beb2942c2fe42560737be230</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>test cases for different option modes</msg>
+				</commit><commit>
+					<time>1525179760</time>
+					<sha1>ac889ad16905b27d903ed5ba296324fddd68d115</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Landscape Image scaling test</msg>
+				</commit><commit>
+					<time>1525179618</time>
+					<sha1>26465c061fa3058d0e328eb7c1473fe1866fdfc2</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Test Case to test portrait image scaling</msg>
+				</commit><commit>
+					<time>1525179397</time>
+					<sha1>73eb70a655a848df2c117228d307a48c467cf7ba</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Aufgabe 2</msg>
+				</commit><commit>
 					<time>1525179253</time>
 					<sha1>8be5b0e9aa6fbfcfa6dd1d9490d6d7f5db46a4c5</sha1>
 					<author>Rusheel</author>
