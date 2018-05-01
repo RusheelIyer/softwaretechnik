@@ -1,0 +1,69 @@
+From aa3bb60d3a101019971acfd6629377b8391a0fb7 Mon Sep 17 00:00:00 2001
+From: Rusheel <rusheel2911@gmail.com>
+Date: Tue, 1 May 2018 14:39:43 +0200
+Subject: [PATCH] Aufgabe 2g
+
+---
+ .../src/main/java/org/jis/generator/Generator.java     | 10 ++++++++--
+ .../src/test/java/jmjrst/main/GeneratorTest.java       | 18 ++++++++++++++++++
+ 2 files changed, 26 insertions(+), 2 deletions(-)
+
+diff --git a/iMage/jmjrst.main/src/main/java/org/jis/generator/Generator.java b/iMage/jmjrst.main/src/main/java/org/jis/generator/Generator.java
+index e529b67..7fb4a29 100755
+--- a/iMage/jmjrst.main/src/main/java/org/jis/generator/Generator.java
++++ b/iMage/jmjrst.main/src/main/java/org/jis/generator/Generator.java
+@@ -67,6 +67,10 @@ import org.jis.options.Options;
+  */
+ public class Generator {
+   public final static double ROTATE_90  = Math.toRadians(90);
++  /**
++   * constant radian value of 180 degrees
++   */
++  public final static double ROTATE_180 = Math.toRadians(180);
+   public final static double ROTATE_270 = Math.toRadians(270);
+ 
+   private Main               m;
+@@ -737,8 +741,10 @@ public class Generator {
+       transform.rotate(Generator.ROTATE_270);
+       width = image.getHeight(null); // swap
+       height = image.getWidth(null);
+-    }
+-    else
++    } else if (rotate == Generator.ROTATE_180) {
++    	transform.translate(width, height);
++    	transform.rotate(Generator.ROTATE_180);
++    } else
+     {
+       throw new IllegalArgumentException("degree must be a mutiple of 90�!");
+     }
+diff --git a/iMage/jmjrst.main/src/test/java/jmjrst/main/GeneratorTest.java b/iMage/jmjrst.main/src/test/java/jmjrst/main/GeneratorTest.java
+index abc6418..5efebb1 100644
+--- a/iMage/jmjrst.main/src/test/java/jmjrst/main/GeneratorTest.java
++++ b/iMage/jmjrst.main/src/test/java/jmjrst/main/GeneratorTest.java
+@@ -100,5 +100,23 @@ public class GeneratorTest {
+ 			fail("Height and width of new image does not correspond with original image");
+ 		}
+ 	}
++	
++	/**
++	 * test rotations by 180 degrees
++	 */
++	@Test
++	public void rotateImage180Test() {
++		newImage = generator.rotateImage(image, Math.PI);
++		if ((image.getWidth() == newImage.getWidth()) && (image.getHeight() == newImage.getHeight())) {
++			for (int x = 0; x < image.getHeight(); x++) {
++				for (int y = 0; y < image.getWidth(); y++) {
++					assertEquals(image.getRGB(y, x), 
++							newImage.getRGB((image.getWidth() - 1) - y, (image.getHeight() - 1) - x));
++				}
++			}
++		} else {
++			fail("Height and width of new image does not correspond with original image");
++		}
++	}
+ 
+ }
+-- 
+2.11.0 (Apple Git-81)
+
