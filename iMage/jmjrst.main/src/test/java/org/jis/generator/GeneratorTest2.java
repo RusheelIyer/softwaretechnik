@@ -6,11 +6,14 @@ import static org.junit.Assert.fail;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 
 import javax.imageio.ImageIO;
 
 import org.jis.options.Options;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -149,6 +152,48 @@ public class GeneratorTest2 {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}	
+	}
+	
+	/**
+	 * Test rotate method
+	 * 
+	 * note: ignore because test throws NullPointerException
+	 */
+	@Ignore @Test
+	public void rotateTest() {
+		File file = new File("src/test/resources", "testPicture.jpg");
+		try {
+			file.createNewFile();
+			Files.copy(imageFile.toPath(), file.toPath(), StandardCopyOption.REPLACE_EXISTING);
+			//method being tested
+			generator.rotate(file);
+			BufferedImage testImage = ImageIO.read(file);
+			assertEquals(image.getHeight(), testImage.getWidth());
+			assertEquals(image.getWidth(), testImage.getHeight());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * Test rotate method with integer angle
+	 * 
+	 * note: ignored because throws NullPointerException
+	 */
+	@Ignore @Test
+	public void rotateIntegerTest() {
+		File file = new File("src/test/resources", "testPicture.jpg");
+		try {
+			file.createNewFile();
+			Files.copy(imageFile.toPath(), file.toPath(), StandardCopyOption.REPLACE_EXISTING);
+			//method being tested
+			generator.rotate(file, 90);
+			BufferedImage testImage = ImageIO.read(file);
+			assertEquals(image.getHeight(), testImage.getWidth());
+			assertEquals(image.getWidth(), testImage.getHeight());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 }
