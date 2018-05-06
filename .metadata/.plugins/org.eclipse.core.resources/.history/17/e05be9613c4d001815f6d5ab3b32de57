@@ -1,0 +1,104 @@
+package jmjrst.main;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
+
+import java.awt.image.BufferedImage;
+import java.io.File;
+
+import javax.imageio.ImageIO;
+
+import org.jis.generator.Generator;
+import org.junit.Before;
+import org.junit.Test;
+
+/**
+ * Testing Generator Class code
+ * @author rusheel iyer
+ *
+ */
+public class GeneratorTest {
+
+	private Generator generator;
+	private BufferedImage image;
+	private BufferedImage newImage = null;
+	
+	/**
+	 * set up before each test case
+	 * @throws Exception exceptions
+	 */
+	@Before
+	public void setUp() throws Exception {
+		
+		generator = new Generator(null, 0);
+		File imageFile = new File("src/test/resources/picture.jpg");
+		image = ImageIO.read(imageFile);
+		
+	}
+
+	/**
+	 * check that an image remains unchanged when the value it is to be rotated by = 0
+	 */
+	@Test
+	public void rotateImageTest1() {
+		//check if same image reference, because new image created when image is rotated.
+		assertTrue(generator.rotateImage(image, 0.0) == image);
+	}
+	
+	/**
+	 * check that a null image does not affect the outcome of the rotate image method
+	 */
+	@Test
+	public void rotateImageTest2() {
+		assertTrue(generator.rotateImage(null, 0.0) == null);
+	}
+	
+	/**
+	 * test that the rotateImage method doesn't accept illegal rotate values
+	 */
+	@Test
+	public void illegalRotateImageTest() {
+		try {
+			generator.rotateImage(image, 0.5);
+			fail("An IllegalArgumentExcpetion should be thrown");
+		} catch (IllegalArgumentException e) {
+
+		}
+	}
+	
+	/**
+	 * test rotations by 90 degrees
+	 */
+	@Test
+	public void rotateImage90Test() {
+		newImage = generator.rotateImage(image, Math.PI / 2);
+		if ((image.getWidth() == newImage.getHeight()) && (image.getHeight() == newImage.getWidth())) {
+			for (int x = 0; x < image.getHeight(); x++) {
+				for (int y = 0; y < image.getWidth(); y++) {
+					assertEquals(image.getRGB(y, x), newImage.getRGB((image.getHeight() - 1) - x, y));
+				}
+			}
+		} else {
+			fail("Height and width of new image does not correspond with original image");
+		}
+	}
+
+	/**
+	 * test rotations by 270 degrees
+	 */
+	@Test
+	public void rotateImage270Test() {
+		newImage = generator.rotateImage(image, 3 * Math.PI / 2);
+		if ((image.getWidth() == newImage.getHeight()) && (image.getHeight() == newImage.getWidth())) {
+			for (int x = 0; x < image.getHeight(); x++) {
+				for (int y = 0; y < image.getWidth(); y++) {
+					assertEquals(image.getRGB(y, x), newImage.getRGB(x, (image.getWidth() - 1) - y));
+				}
+			}
+		} else {
+			fail("Height and width of new image does not correspond with original image");
+		}
+	}
+
+}

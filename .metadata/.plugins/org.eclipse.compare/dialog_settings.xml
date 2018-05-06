@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="PatchWizard">
+		<item value="700" key="DIALOG_WIDTH"/>
+		<item value="1|.AppleSystemUIFont|11.0|0|COCOA|1|.AppleSystemUIFont" key="DIALOG_FONT_NAME"/>
+		<item value="" key="PatchWizardPage1.WORKSPACE_PATH"/>
+		<item value="2" key="PatchWizardPage1.INPUT_METHOD"/>
+		<item value="/Users/rusheeliyer/Desktop/Germany/Uni/Semester 2/Softwaretechnik I/Übungsblätter/Blatt 1/ub1_a1_g_patch.patch" key="PatchWizardPage1.PATCH_FILES"/>
+		<item value="690" key="DIALOG_HEIGHT"/>
+		<item value="162" key="DIALOG_X_ORIGIN"/>
+		<item value="-29" key="DIALOG_Y_ORIGIN"/>
+		<list key="PatchWizardPage1.PATCH_FILES">
+			<item value="/Users/rusheeliyer/Desktop/Germany/Uni/Semester 2/Softwaretechnik I/Übungsblätter/Blatt 1/ub1_a1_g_patch.patch"/>
+		</list>
+		<list key="PatchWizardPage1.PATCH_URLS">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="PreviewPatchPage">
+		<item value="true" key="expandPatchOptions"/>
+		<item value="false" key="generateRejects"/>
+	</section>
+</section>

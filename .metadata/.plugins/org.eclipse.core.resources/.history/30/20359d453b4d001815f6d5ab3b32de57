@@ -1,0 +1,26 @@
+package jmjrst.main;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class GeneratorTest {
+
+	private Generator generator;
+	private BufferedImage image;
+	private BufferedImage newImage = null;
+	
+	@Before
+	public void setUp() throws Exception {
+		
+		generator = new Generator(null, 0.0);
+		
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}
