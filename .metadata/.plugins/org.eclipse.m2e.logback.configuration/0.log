@@ -498,3 +498,84 @@
 2018-05-01 15:12:49,326 [Stop Help Server] INFO  org.eclipse.jetty.server.session - Stopped scavenging
 2018-05-01 15:12:49,392 [Stop Help Server] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@6ab3051a{/help,null,UNAVAILABLE}
 2018-05-06 15:09:15,330 [Worker-1] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-05-10 16:00:58,374 [Worker-4] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2018-05-10 16:41:05,201 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:41:05,220 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2018-05-10 16:41:05,256 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:41:05,256 [Worker-21] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 4 resources
+2018-05-10 16:46:39,284 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: swt1:shutterpile:0.0.1-SNAPSHOT @ /Users/rusheeliyer/softwaretechnik/iMage/shutterpile/pom.xml.
+2018-05-10 16:46:39,492 [Worker-23] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /shutterpile/src/main/java
+2018-05-10 16:46:39,498 [Worker-23] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /shutterpile/src/main/resources
+2018-05-10 16:46:39,502 [Worker-23] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /shutterpile/src/test/java
+2018-05-10 16:46:39,502 [Worker-23] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /shutterpile/src/test/resources
+2018-05-10 16:46:40,383 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:46:40,384 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:46:40,386 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:46:40,387 [Worker-27] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:48:27,523 [Worker-21] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: swt1:iMage.shutterpile:0.0.1-SNAPSHOT @ /Users/rusheeliyer/softwaretechnik/iMage/iMage.shutterpile/pom.xml.
+2018-05-10 16:48:27,586 [Worker-21] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /iMage.shutterpile/src/main/java
+2018-05-10 16:48:27,587 [Worker-21] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /iMage.shutterpile/src/main/resources
+2018-05-10 16:48:27,591 [Worker-21] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /iMage.shutterpile/src/test/java
+2018-05-10 16:48:27,591 [Worker-21] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /iMage.shutterpile/src/test/resources
+2018-05-10 16:48:28,180 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:48:28,181 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:48:28,183 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:48:28,184 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:48:28,193 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:48:28,194 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rusheeliyer/softwaretechnik/iMage/shutterpile/src/main/resources
+2018-05-10 16:48:28,196 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:48:28,196 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory /Users/rusheeliyer/softwaretechnik/iMage/shutterpile/src/test/resources
+2018-05-10 16:48:36,056 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using NULL lifecycle mapping for MavenProject: swt1:iMage:0.0.1-SNAPSHOT @ /Users/rusheeliyer/softwaretechnik/iMage/pom.xml.
+2018-05-10 16:48:36,805 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: swt1.ub1.a3:2091489:0.0.1-SNAPSHOT @ /Users/rusheeliyer/softwaretechnik/iMage/jmjrst.main/pom.xml.
+2018-05-10 16:48:36,867 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: swt1:iMage.shutterpile:0.0.1-SNAPSHOT @ /Users/rusheeliyer/softwaretechnik/iMage/iMage.shutterpile/pom.xml.
+2018-05-10 16:48:37,314 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:48:37,322 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:48:37,324 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:48:37,324 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:48:37,361 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:48:37,361 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:48:37,363 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:48:37,363 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:49:27,375 [Worker-22] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: swt1.ub2.a4:iMage.shutterpile:0.0.1-SNAPSHOT @ /Users/rusheeliyer/softwaretechnik/iMage/iMage.shutterpile/pom.xml.
+2018-05-10 16:49:33,824 [DefaultMetadataResolver-0-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://bob.ipd.kit.edu/nexus/content/repositories/swt1/swt1/iMage.shutterpile-base/0.0.1-SNAPSHOT/maven-metadata.xml
+2018-05-10 16:49:35,512 [DefaultMetadataResolver-0-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://bob.ipd.kit.edu/nexus/content/repositories/swt1/swt1/iMage.shutterpile-base/0.0.1-SNAPSHOT/maven-metadata.xml
+2018-05-10 16:49:35,634 [Worker-22] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://bob.ipd.kit.edu/nexus/content/repositories/swt1/swt1/iMage.shutterpile-base/0.0.1-SNAPSHOT/iMage.shutterpile-base-0.0.1-20180502.144646-5.pom
+2018-05-10 16:49:35,696 [Worker-22] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://bob.ipd.kit.edu/nexus/content/repositories/swt1/swt1/iMage.shutterpile-base/0.0.1-SNAPSHOT/iMage.shutterpile-base-0.0.1-20180502.144646-5.jar
+2018-05-10 16:49:35,730 [Worker-22] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://bob.ipd.kit.edu/nexus/content/repositories/swt1/swt1/iMage.shutterpile-base/0.0.1-SNAPSHOT/iMage.shutterpile-base-0.0.1-20180502.144646-5.jar
+2018-05-10 16:49:35,854 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:49:35,858 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:49:35,860 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:49:35,861 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:49:37,217 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:49:37,218 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:49:37,221 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:49:37,222 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:50:09,013 [Worker-22] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: swt1:iMage.shutterpile-cli:0.0.1-SNAPSHOT @ /Users/rusheeliyer/softwaretechnik/iMage/iMage.shutterpile-cli/pom.xml.
+2018-05-10 16:50:09,049 [Worker-22] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /iMage.shutterpile-cli/src/main/java
+2018-05-10 16:50:09,049 [Worker-22] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /iMage.shutterpile-cli/src/main/resources
+2018-05-10 16:50:09,054 [Worker-22] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /iMage.shutterpile-cli/src/test/java
+2018-05-10 16:50:09,054 [Worker-22] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /iMage.shutterpile-cli/src/test/resources
+2018-05-10 16:50:09,541 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:50:09,542 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:50:09,545 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:50:09,546 [Worker-28] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:51:01,083 [Worker-29] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: swt1.ub2.a5:iMage.shutterpile-cli:0.0.1-SNAPSHOT @ /Users/rusheeliyer/softwaretechnik/iMage/iMage.shutterpile-cli/pom.xml.
+2018-05-10 16:51:01,155 [Worker-29] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://bob.ipd.kit.edu/nexus/content/repositories/swt1/commons-cli/commons-cli/1.4/commons-cli-1.4.pom
+2018-05-10 16:51:07,353 [Worker-29] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.pom
+2018-05-10 16:51:07,383 [Worker-29] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.pom
+2018-05-10 16:51:07,535 [DefaultMetadataResolver-1-1] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://bob.ipd.kit.edu/nexus/content/repositories/swt1/swt1/iMage.shutterpile/0.0.1-SNAPSHOT/maven-metadata.xml
+2018-05-10 16:51:07,535 [DefaultMetadataResolver-1-0] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://bob.ipd.kit.edu/nexus/content/repositories/swt1/swt1/iMage.shutterpile/0.0.1-SNAPSHOT/maven-metadata.xml
+2018-05-10 16:51:07,620 [Worker-29] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://bob.ipd.kit.edu/nexus/content/repositories/swt1/swt1/iMage.shutterpile/0.0.1-SNAPSHOT/iMage.shutterpile-0.0.1-20180504.124308-2.pom
+2018-05-10 16:51:07,679 [Worker-29] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://bob.ipd.kit.edu/nexus/content/repositories/swt1/commons-cli/commons-cli/1.4/commons-cli-1.4.jar
+2018-05-10 16:51:07,714 [Worker-29] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading http://bob.ipd.kit.edu/nexus/content/repositories/swt1/swt1/iMage.shutterpile/0.0.1-SNAPSHOT/iMage.shutterpile-0.0.1-20180504.124308-2.jar
+2018-05-10 16:51:07,759 [Worker-29] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded http://bob.ipd.kit.edu/nexus/content/repositories/swt1/swt1/iMage.shutterpile/0.0.1-SNAPSHOT/iMage.shutterpile-0.0.1-20180504.124308-2.jar
+2018-05-10 16:51:07,799 [Worker-29] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar
+2018-05-10 16:51:07,889 [Worker-29] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/commons-cli/commons-cli/1.4/commons-cli-1.4.jar
+2018-05-10 16:51:07,997 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:51:07,998 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:51:08,000 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:51:08,000 [Worker-29] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:51:09,216 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:51:09,216 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-10 16:51:09,218 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-10 16:51:09,218 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
