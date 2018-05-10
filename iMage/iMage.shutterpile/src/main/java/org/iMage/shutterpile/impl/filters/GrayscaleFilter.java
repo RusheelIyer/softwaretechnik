@@ -22,8 +22,9 @@ public class GrayscaleFilter implements IFilter {
 		for (int x = 0; x < image.getWidth(); x++) {
 			for (int y = 0; y < image.getHeight(); y++) {
 				Color pixelColor = new Color(image.getRGB(x, y));
-				int newRGB = (pixelColor.getRed() + pixelColor.getGreen() + pixelColor.getBlue()) / 3;
-				image.setRGB(x, y, newRGB);
+				int newValue = ((pixelColor.getRed() + pixelColor.getGreen() + pixelColor.getBlue()) / 3);
+				pixelColor = new Color(newValue, newValue, newValue);
+				image.setRGB(x, y, pixelColor.getRGB());
 			}
 		}
 		return image;
