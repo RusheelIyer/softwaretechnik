@@ -50,9 +50,17 @@ public class ScaleFilterTest {
 	 */
 	@Test
 	public void testApplyBufferedImageValue() {
-		BufferedImage newImage = filter.apply(testImage, 2.01f);
-		assertEquals(testImage.getWidth() * 2, newImage.getWidth());
-		assertEquals(testImage.getHeight() * 2, newImage.getHeight());
+		BufferedImage newImage = filter.apply(testImage, 2.01);
+		assertEquals((int) (testImage.getWidth() * 2.01), newImage.getWidth());
+		assertEquals((int) (testImage.getHeight() * 2.01), newImage.getHeight());
+		
+		newImage = filter.apply(testImage, 0.5);
+		assertEquals(testImage.getWidth() / 2, newImage.getWidth());
+		assertEquals(testImage.getHeight() / 2, newImage.getHeight());
+		
+		newImage = filter.apply(testImage, 0.33333);
+		assertEquals((int) (testImage.getWidth() * 0.33333), newImage.getWidth());
+		assertEquals((int) (testImage.getHeight() * 0.33333), newImage.getHeight());
 	}
 
 }

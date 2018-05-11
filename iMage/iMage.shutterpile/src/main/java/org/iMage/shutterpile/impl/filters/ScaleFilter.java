@@ -33,32 +33,18 @@ public class ScaleFilter implements IFilter {
 	 * @param arg1 the scale value
 	 * @return the scaled image
 	 */
-	public BufferedImage apply(BufferedImage arg0, float arg1) {
-		if (arg1 < 1) {
-			int scale = Math.round((1 / arg1));
-			Image scaledImage = 
-					arg0.getScaledInstance(arg0.getWidth() / scale, arg0.getHeight() / scale, Image.SCALE_SMOOTH);
-			int width = scaledImage.getWidth(null);
-			int height = scaledImage.getHeight(null);
-			
-			BufferedImage newImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
-			Graphics imageGraphics = newImage.getGraphics();
-			imageGraphics.drawImage(scaledImage, 0, 0, null);
-			imageGraphics.dispose();
-			return newImage;
-		} else {
-			int scale = Math.round(arg1); 
-			Image scaledImage = 
-					arg0.getScaledInstance(arg0.getWidth() * scale, arg0.getHeight() * scale, Image.SCALE_SMOOTH);
-			int width = scaledImage.getWidth(null);
-			int height = scaledImage.getHeight(null);
-			
-			BufferedImage newImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
-			Graphics imageGraphics = newImage.getGraphics();
-			imageGraphics.drawImage(scaledImage, 0, 0, null);
-			imageGraphics.dispose();
-			return newImage;
-		}
+	public BufferedImage apply(BufferedImage arg0, double arg1) {
+		int newHeight = (int) (arg0.getHeight() * arg1);
+		int newWidth = (int) (arg0.getWidth() * arg1);
+		Image scaledImage = arg0.getScaledInstance(newWidth, newHeight, Image.SCALE_SMOOTH);
+		int width = scaledImage.getWidth(null);
+		int height = scaledImage.getHeight(null);
+		
+		BufferedImage newImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
+		Graphics imageGraphics = newImage.getGraphics();
+		imageGraphics.drawImage(scaledImage, 0, 0, null);
+		imageGraphics.dispose();
+		return newImage;
 		
 	}
 
