@@ -42,13 +42,13 @@ public class GrayscaleFilterTest {
 		File testFile = new File("src/test/resources/tichyWatermark_input_no_alpha.png");
 		try {
 			BufferedImage testImage = ImageIO.read(testFile);
+			BufferedImage newImage = filter.apply(testImage);
 			for (int x = 0; x < testImage.getWidth(); x++) {
 				for (int y = 0; y < testImage.getHeight(); y++) {
 					Color pixelColor = new Color(testImage.getRGB(x, y));
 					int newValues = (pixelColor.getRed() + pixelColor.getGreen() + pixelColor.getBlue()) / 3;
 					pixelColor = new Color(newValues, newValues, newValues);
-					filter.apply(testImage);
-					assertEquals(pixelColor.getRGB(), testImage.getRGB(x, y));
+					assertEquals(pixelColor.getRGB(), newImage.getRGB(x, y));
 				}
 			}
 		} catch (IOException e) {
@@ -65,13 +65,13 @@ public class GrayscaleFilterTest {
 		File testFile = new File("src/test/resources/pearWatermark_input_alpha_small.png");
 		try {
 			BufferedImage testImage = ImageIO.read(testFile);
+			BufferedImage newImage = filter.apply(testImage);
 			for (int x = 0; x < testImage.getWidth(); x++) {
 				for (int y = 0; y < testImage.getHeight(); y++) {
 					Color pixelColor = new Color(testImage.getRGB(x, y));
 					int newValues = (pixelColor.getRed() + pixelColor.getGreen() + pixelColor.getBlue()) / 3;
 					pixelColor = new Color(newValues, newValues, newValues);
-					filter.apply(testImage);
-					assertEquals(pixelColor.getRGB(), testImage.getRGB(x, y));
+					assertEquals(pixelColor.getRGB(), newImage.getRGB(x, y));
 				}
 			}
 		} catch (IOException e) {
