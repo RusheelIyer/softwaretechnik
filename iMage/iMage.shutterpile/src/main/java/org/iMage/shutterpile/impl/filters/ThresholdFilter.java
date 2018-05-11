@@ -21,7 +21,6 @@ public class ThresholdFilter implements IFilter {
 				Color pixel = new Color(image.getRGB(x, y));
 				int average = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
 				if (average > 127) {
-					//set to 0, because is transparent in a png file
 					image.setRGB(x, y, 0);
 				}
 			}
@@ -37,7 +36,7 @@ public class ThresholdFilter implements IFilter {
 	 */
 	public BufferedImage apply(BufferedImage arg0, int arg1) {
 		BufferedImage image = arg0;
-		if (arg1 < 0 || arg1 > 255) {
+		if ((arg1 < 0) || (arg1 > 255)) {
 			throw new IllegalArgumentException("Please enter a valid threshold value");
 		} else {
 			for (int x = 0; x < image.getWidth(); x++) {

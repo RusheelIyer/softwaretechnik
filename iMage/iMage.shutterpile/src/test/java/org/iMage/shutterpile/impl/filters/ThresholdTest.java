@@ -33,56 +33,62 @@ public class ThresholdTest {
 	@Before
 	public void setUp() throws Exception {
 		filter = new ThresholdFilter();
+		testFile = new File("src/test/resources/tichyWatermark_input_no_alpha.png");
+		testImage = ImageIO.read(testFile);
 	}
 
+	/**
+	 * Test the threshold filter application without specific threshold value
+	 */
 	@Test
 	public void testApply() {
-		testFile = new File("src/test/resources/tichyWatermark_input_no_alpha.png");
-		try {
-			testImage = ImageIO.read(testFile);
-			BufferedImage newImage = filter.apply(testImage);
-			for (int x = 0; x < testImage.getWidth(); x++) {
-				for (int y = 0; y < testImage.getHeight(); y++) {
-					Color pixel = new Color(testImage.getRGB(x, y));
-					int average = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
-					File outputFile = new File("src/test/resources/tichy.png");
-					ImageIO.write(newImage, "png", outputFile);
-					if (average > 127) {
-						assertEquals(0, newImage.getRGB(x, y));
-					} else {
-						assertEquals(pixel.getRGB(), newImage.getRGB(x, y));
-					}
+		BufferedImage newImage = filter.apply(testImage);
+		for (int x = 0; x < testImage.getWidth(); x++) {
+			for (int y = 0; y < testImage.getHeight(); y++) {
+				Color pixel = new Color(testImage.getRGB(x, y));
+				int average = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
+				if (average > 127) {
+					assertEquals(0, newImage.getRGB(x, y));
+				} else {
+					assertEquals(pixel.getRGB(), newImage.getRGB(x, y));
 				}
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
-			fail("Image read error");
 		}
 	}
 
+	/**
+	 * Test the threshold filter application without specific threshold value
+	 */
 	@Test
 	public void testApplyValue() {
-		testFile = new File("src/test/resources/tichyWatermark_input_no_alpha.png");
-		try {
-			testImage = ImageIO.read(testFile);
-			BufferedImage newImage = filter.apply(testImage, 50);
-			for (int x = 0; x < testImage.getWidth(); x++) {
-				for (int y = 0; y < testImage.getHeight(); y++) {
-					Color pixelColor = new Color(testImage.getRGB(x, y));
-					int average = (pixelColor.getRed() + pixelColor.getGreen() + pixelColor.getBlue()) / 3;
-					File outputFile = new File("src/test/resources/tichy1.png");
-					ImageIO.write(newImage, "png", outputFile);
-					if (average > 128) {
-						assertEquals(0, newImage.getRGB(x, y));
-					} else {
-						assertEquals(testImage.getRGB(x, y), newImage.getRGB(x, y));
-					}
+		BufferedImage newImage = filter.apply(testImage, 100);
+		for (int x = 0; x < testImage.getWidth(); x++) {
+			for (int y = 0; y < testImage.getHeight(); y++) {
+				Color pixel = new Color(testImage.getRGB(x, y));
+				int average = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
+				if (average > 100) {
+					assertEquals(0, newImage.getRGB(x, y));
+				} else {
+					assertEquals(pixel.getRGB(), newImage.getRGB(x, y));
 				}
 			}
-		} catch (IOException e) {
-			e.printStackTrace();
-			fail("Image read error");
 		}
+	}
+	
+	/**
+	 * Test that illegal values (> 255) are not excepted
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void testApplyIllegalValuePositive() {
+		filter.apply(testImage, 256);
+	}
+	
+	/**
+	 * Test that illegal values (< 0) are not excepted
+	 */
+	@Test(expected = IllegalArgumentException.class)
+	public void testApplyIllegalValueNegative() {
+		filter.apply(testImage, -2);
 	}
 
 }
