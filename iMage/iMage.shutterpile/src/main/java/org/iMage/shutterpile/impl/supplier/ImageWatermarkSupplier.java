@@ -16,7 +16,7 @@ import org.iMage.shutterpile.port.IWatermarkSupplier;
  */
 public final class ImageWatermarkSupplier implements IWatermarkSupplier {
 	
-	BufferedImage watermarkInput;
+	private BufferedImage watermarkInput;
 
   /**
    * Create the {@link IWatermarkSupplier} by base image of watermark.
@@ -27,7 +27,7 @@ public final class ImageWatermarkSupplier implements IWatermarkSupplier {
   public ImageWatermarkSupplier(BufferedImage watermarkInput) {
 	  GrayscaleFilter grayscale = new GrayscaleFilter();
 	  ThresholdFilter threshold = new ThresholdFilter();
-	  this.watermarkInput = threshold.apply(grayscale.apply(watermarkInput));
+	  watermarkInput = threshold.apply(grayscale.apply(watermarkInput));
 	  
 	  if (!this.watermarkInput.getColorModel().hasAlpha()) {
 			for (int x = 0; x < this.watermarkInput.getWidth(); x++) {
