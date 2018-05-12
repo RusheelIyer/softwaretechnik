@@ -18,16 +18,15 @@ public class GrayscaleFilter implements IFilter {
 
 	@Override
 	public BufferedImage apply(BufferedImage arg0) {
-		BufferedImage image = arg0;
-		for (int x = 0; x < image.getWidth(); x++) {
-			for (int y = 0; y < image.getHeight(); y++) {
-				Color pixelColor = new Color(image.getRGB(x, y));
+		for (int x = 0; x < arg0.getWidth(); x++) {
+			for (int y = 0; y < arg0.getHeight(); y++) {
+				Color pixelColor = new Color(arg0.getRGB(x, y));
 				int newValue = ((pixelColor.getRed() + pixelColor.getGreen() + pixelColor.getBlue()) / 3);
 				pixelColor = new Color(newValue, newValue, newValue);
-				image.setRGB(x, y, pixelColor.getRGB());
+				arg0.setRGB(x, y, pixelColor.getRGB());
 			}
 		}
-		return image;
+		return arg0;
 	}
 
 }

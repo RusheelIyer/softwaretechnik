@@ -19,7 +19,6 @@ public class ScaleFilter implements IFilter {
 		Image scaledImage = arg0.getScaledInstance(arg0.getWidth() / 2, arg0.getHeight() / 2, Image.SCALE_SMOOTH);
 		int width = scaledImage.getWidth(null);
 		int height = scaledImage.getHeight(null);
-		
 		BufferedImage newImage = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 		Graphics imageGraphics = newImage.getGraphics();
 		imageGraphics.drawImage(scaledImage, 0, 0, null);

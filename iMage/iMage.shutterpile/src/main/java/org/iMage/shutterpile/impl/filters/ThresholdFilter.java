@@ -15,17 +15,16 @@ public class ThresholdFilter implements IFilter {
 	@Override
 	public BufferedImage apply(BufferedImage arg0) {
 		
-		BufferedImage image = arg0;
-		for (int x = 0; x < image.getWidth(); x++) {
-			for (int y = 0; y < image.getHeight(); y++) {
-				Color pixel = new Color(image.getRGB(x, y));
+		for (int x = 0; x < arg0.getWidth(); x++) {
+			for (int y = 0; y < arg0.getHeight(); y++) {
+				Color pixel = new Color(arg0.getRGB(x, y));
 				int average = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
 				if (average > 127) {
-					image.setRGB(x, y, 0);
+					arg0.setRGB(x, y, 0);
 				}
 			}
 		}
-		return image;
+		return arg0;
 	}
 
 	/**
@@ -35,21 +34,20 @@ public class ThresholdFilter implements IFilter {
 	 * @return the image with the filter
 	 */
 	public BufferedImage apply(BufferedImage arg0, int arg1) {
-		BufferedImage image = arg0;
 		if ((arg1 < 0) || (arg1 > 255)) {
 			throw new IllegalArgumentException("Please enter a valid threshold value");
 		} else {
-			for (int x = 0; x < image.getWidth(); x++) {
-				for (int y = 0; y < image.getHeight(); y++) {
-					Color pixel = new Color(image.getRGB(x, y));
+			for (int x = 0; x < arg0.getWidth(); x++) {
+				for (int y = 0; y < arg0.getHeight(); y++) {
+					Color pixel = new Color(arg0.getRGB(x, y));
 					int average = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
 					if (average > arg1) {
-						image.setRGB(x, y, 0);
+						arg0.setRGB(x, y, 0);
 					}
 				}
 			}
 		}
-		return image;
+		return arg0;
 	}
 	
 }
