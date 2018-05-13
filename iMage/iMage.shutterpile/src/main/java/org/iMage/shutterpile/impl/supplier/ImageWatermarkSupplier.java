@@ -1,6 +1,8 @@
 package org.iMage.shutterpile.impl.supplier;
 
+import java.awt.AlphaComposite;
 import java.awt.Color;
+import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 
 import org.iMage.shutterpile.impl.filters.GrayscaleFilter;
@@ -27,14 +29,23 @@ public final class ImageWatermarkSupplier implements IWatermarkSupplier {
   public ImageWatermarkSupplier(BufferedImage watermarkInput) {
 	  GrayscaleFilter grayscale = new GrayscaleFilter();
 	  ThresholdFilter threshold = new ThresholdFilter();
-	  watermarkInput = threshold.apply(grayscale.apply(watermarkInput));
+	  this.watermarkInput = threshold.apply(grayscale.apply(watermarkInput));
 	  
 	  if (!this.watermarkInput.getColorModel().hasAlpha()) {
-			for (int x = 0; x < this.watermarkInput.getWidth(); x++) {
-				for (int y = 0; y < this.watermarkInput.getHeight(); y++) {
-					this.watermarkInput.setRGB(x, y, this.watermarkInput.getRGB(x, y) & 0x00FFFFFF);
+			BufferedImage newImage = new BufferedImage(this.watermarkInput.getWidth(), 
+					this.watermarkInput.getHeight(), BufferedImage.TYPE_INT_ARGB);
+			for (int x = 0; x < newImage.getWidth(); x++) {
+				for (int y = 0; y < newImage.getHeight(); y++) {
+					Color watermarkColor = new Color(this.watermarkInput.getRGB(x, y), true);
+					int red = watermarkColor.getRed();
+					int green = watermarkColor.getGreen();
+					int blue = watermarkColor.getBlue();
+					int alpha = 255;
+					int argb = (alpha << 24) | (red << 16) | (green << 8) | (blue);
+					newImage.setRGB(x, y, argb);
 				}
 			}
+			this.watermarkInput = newImage;
 		}
 	  
   }
@@ -45,10 +56,13 @@ public final class ImageWatermarkSupplier implements IWatermarkSupplier {
 	  BufferedImage watermark = this.watermarkInput;
 	  for (int x = 0; x < watermark.getWidth(); x++) {
 			for (int y = 0; y < watermark.getHeight(); y++) {
-				Color pixel = new Color(watermark.getRGB(x, y));
+				Color pixel = new Color(watermark.getRGB(x, y), true);
+				int red = pixel.getRed();
+				int green = pixel.getGreen();
+				int blue = pixel.getBlue();
 				int newAlpha = pixel.getAlpha() / 2;
-				pixel = new Color(pixel.getRed(), pixel.getGreen(), pixel.getBlue(), newAlpha);
-				watermark.setRGB(x, y, pixel.getRGB());
+				int argb = (newAlpha << 24) | (red << 16) | (green << 8) | (blue);
+				watermark.setRGB(x, y, argb);
 			}
 		}
 	  
