@@ -32,7 +32,7 @@ public class WatermarkerTest {
 	@Test
 	public void generateSizeTest() {
 		
-		baseFile = new File("src/test/resources/brightPicture_no_alpha.png");
+		baseFile = new File("src/test/resources/brightPicture_no_alpha_small.png");
 		watermarkFile = new File("src/test/resources/pearWatermark_input_alpha.png");
 		try {
 			baseImage = ImageIO.read(baseFile);

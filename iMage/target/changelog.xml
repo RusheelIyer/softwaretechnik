@@ -1,4 +1,215 @@
 <changelog><commit>
+					<time>1526231787</time>
+					<sha1>55eb1447ad97191ab75618102dd6364e0f03b078</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>added test case for Watermarker</msg>
+				</commit><commit>
+					<time>1526219706</time>
+					<sha1>71d2de6b7569314b572fe8a100fd86eb99b5629c</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Created two test cases for ImageWatermarkSupplier</msg>
+				</commit><commit>
+					<time>1526211215</time>
+					<sha1>7c5507095c511ae3b5ea3a1a29a7855e9612ab85</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>implemented Watermarker</msg>
+				</commit><commit>
+					<time>1526210093</time>
+					<sha1>f2623e4bb4d89a7601f93f3ac172df8128e123c4</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>made change to threshold filter, was not returning transparent image</msg>
+				</commit><commit>
+					<time>1526198593</time>
+					<sha1>e6bc4bc8c060a67ab17cf1e18bad69a8fcce9a1a</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Fixed Watxed errors in WatermarkFilter implementation</msg>
+				</commit><commit>
+					<time>1526140493</time>
+					<sha1>0aad6a603fa974ae5558de7380ab6aaacac90475</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Implemented WatermarkFilter</msg>
+				</commit><commit>
+					<time>1526138033</time>
+					<sha1>6c6e21be286f31b10b962c66308ac59868374a47</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>implemented ImageWatermarkSupplier Class</msg>
+				</commit><commit>
+					<time>1526137473</time>
+					<sha1>9872cabda82ec863377ec7eaf18117056407e1d0</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>added few test examples to scale filter test</msg>
+				</commit><commit>
+					<time>1526036273</time>
+					<sha1>78c48901c63b7f7858ca67b28c395f8949892b6a</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>made changes to scale filter implementation and added few test cases</msg>
+				</commit><commit>
+					<time>1526033975</time>
+					<sha1>bf5a53f6a4534cece8a859b060f3b784ef49f510</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>created scale filter and test cases for it</msg>
+				</commit><commit>
+					<time>1526030606</time>
+					<sha1>c3f31e92e532ea5be6a157db5d633024e32d96c5</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>improved performance time on GrayscaleFilter Test cases by applying filter before loop</msg>
+				</commit><commit>
+					<time>1526030301</time>
+					<sha1>70fe9eb32d92cd55a6df91b059b6fc69408b7615</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>added test cases for the threshold filter</msg>
+				</commit><commit>
+					<time>1526028306</time>
+					<sha1>12030d87da9bd933cfd8e0ec1a98bd85cea381a8</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added test case for Threshold Filter and fixed the error in the Threshold Filter class</msg>
+				</commit><commit>
+					<time>1525975106</time>
+					<sha1>5eb7891319b17eead170755193f1379e58f04795</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Threshold Filter Implemented</msg>
+				</commit><commit>
+					<time>1525972936</time>
+					<sha1>7db5af471d8e43b407b30c81deeaf36e43746420</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added test case for the Grayscale filter</msg>
+				</commit><commit>
+					<time>1525965391</time>
+					<sha1>8696a9748a7c22de05ee0b1a768d512808152f51</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>added grayscalefilter implementation</msg>
+				</commit><commit>
+					<time>1525963901</time>
+					<sha1>246b35178c1709eb7f0f28f5d0ddda6f061c8255</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added Module Templates to workspace</msg>
+				</commit><commit>
+					<time>1525797276</time>
+					<sha1>90134cd16e3a4361a0d36c6afe4e52b2f1619b9e</sha1>
+					<author>uomvb</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added Scenarios and description of the use cases</msg>
+				</commit><commit>
+					<time>1525796223</time>
+					<sha1>a83537e90e2872ef783d0905c93b4f9eef78e7bd</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>removed spellcheck lines from use case diagram</msg>
+				</commit><commit>
+					<time>1525796090</time>
+					<sha1>e928a8804625643c27668129916642838ce9031c</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Edited the existing use case diagram</msg>
+				</commit><commit>
+					<time>1525693186</time>
+					<sha1>f44ee6b929165358cf0a10b43fa7c84f04bcd3a0</sha1>
+					<author>uomvb</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added use case diagram</msg>
+				</commit><commit>
+					<time>1525692710</time>
+					<sha1>287a06fff1543be01c88869314e6c323cc60cd76</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>changed use case file format</msg>
+				</commit><commit>
+					<time>1525692526</time>
+					<sha1>e3d7fcbfb32699bc3925c95dbed964973dc13b27</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>edited use case diagram</msg>
+				</commit><commit>
+					<time>1525692276</time>
+					<sha1>d104e93ffb808bda2da190c602d1cc9c0d0e4a16</sha1>
+					<author>uomvb</author>
+					<branches>refs/heads/master</branches>
+					<msg>Merge branch 'master' of https://github.com/RusheelIyer/softwaretechnik
+&quot;getting files from remote repo&quot;</msg>
+				</commit><commit>
+					<time>1525692230</time>
+					<sha1>3d99dbdec0966acc5ff25f834a25ad87c6889819</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>created use case diagram</msg>
+				</commit><commit>
+					<time>1525688895</time>
+					<sha1>a5ba16918bb6cc88074a322a7860564778943d35</sha1>
+					<author>uomvb</author>
+					<branches>refs/heads/master</branches>
+					<msg>Created Glossary</msg>
+				</commit><commit>
+					<time>1525687970</time>
+					<sha1>558eefcde30a2d6f98b48e4cd54592768954877a</sha1>
+					<author>uomvb</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added extra functional requirement as well as non-functional requirements</msg>
+				</commit><commit>
+					<time>1525687272</time>
+					<sha1>4c89cf3a5020c07988b40ef446eb6b620bb240c2</sha1>
+					<author>uomvb</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added funktionale Anforderungen und Produktdaten</msg>
+				</commit><commit>
+					<time>1525686863</time>
+					<sha1>94e76eb30a370192e783c0cdf9da544b2a896db6</sha1>
+					<author>uomvb</author>
+					<branches>refs/heads/master</branches>
+					<msg>added produkteinsatz</msg>
+				</commit><commit>
+					<time>1525685455</time>
+					<sha1>e3eba8887ecfc930888bc2f6d5ec9181c19eb721</sha1>
+					<author>uomvb</author>
+					<branches>refs/heads/master</branches>
+					<msg>Added the goal of the software to the Lastenheft</msg>
+				</commit><commit>
+					<time>1525684635</time>
+					<sha1>85f159112cf784e9eb4dbc27b4948e8e7181b724</sha1>
+					<author>uomvb</author>
+					<branches>refs/heads/master</branches>
+					<msg>Made title and author information changes</msg>
+				</commit><commit>
+					<time>1525683214</time>
+					<sha1>83b1c83eafa57b43b8b1179f429bd39f6dfa3f27</sha1>
+					<author>uomvb</author>
+					<branches>refs/heads/master</branches>
+					<msg>re-added deleted gitignore file</msg>
+				</commit><commit>
+					<time>1525630018</time>
+					<sha1>a3eca3312ab5a70be4549970b4877520f63f8e99</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>First Commit</msg>
+				</commit><commit>
+					<time>1525629172</time>
+					<sha1>0c8d78d12bc9a6790e7e63f1e3cc69744500b13c</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>First Commit</msg>
+				</commit><commit>
+					<time>1525180309</time>
+					<sha1>192107d089741a7b418e97df1f09317dbed3c08f</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Aufgabe 3</msg>
+				</commit><commit>
 					<time>1525180224</time>
 					<sha1>88a5289743844341badbd468b59511993a12ef3a</sha1>
 					<author>Rusheel</author>
