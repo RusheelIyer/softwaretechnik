@@ -2,6 +2,7 @@ package org.iMage.shutterpile.impl;
 
 import java.awt.image.BufferedImage;
 
+import org.iMage.shutterpile.impl.filters.WatermarkFilter;
 import org.iMage.shutterpile.port.IWatermarkSupplier;
 import org.iMage.shutterpile.port.IWatermarker;
 
@@ -14,6 +15,8 @@ import org.iMage.shutterpile.port.IWatermarker;
  */
 public class Watermarker implements IWatermarker {
 
+	private BufferedImage watermark;
+	
   /**
    * Create the watermarker by {@link IWatermarkSupplier}.
    *
@@ -21,13 +24,15 @@ public class Watermarker implements IWatermarker {
    *          the watermark supplier
    */
   public Watermarker(IWatermarkSupplier iws) {
-    // TODO: implement me!
+	  
+	  this.watermark = iws.getWatermark();
+	  
   }
 
   @Override
   public BufferedImage generate(BufferedImage input, int watermarksPerRow) {
-    // TODO: implement me!
-    return null;
+    WatermarkFilter filter = new WatermarkFilter(this.watermark, watermarksPerRow);
+    return filter.apply(input);
   }
 
 }
