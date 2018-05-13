@@ -59,13 +59,11 @@ public final class ImageWatermarkSupplier implements IWatermarkSupplier {
 				int green = pixel.getGreen();
 				int blue = pixel.getBlue();
 				int newAlpha = pixel.getAlpha() / 2;
-				int argb = (newAlpha << 24) | (red << 16) | (green << 8) | (blue);
-				watermark.setRGB(x, y, argb);
+				Color newColor = new Color(red, green, blue, newAlpha);
+				watermark.setRGB(x, y, newColor.getRGB());
 			}
 		}
-	  
 	  return watermark;
-	  
   }
 
 }

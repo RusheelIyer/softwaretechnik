@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
     <typeInfo handle="=jmjrst.main/src\/main\/java&lt;org.jis.generator{Generator.java[Generator" modifiers="1" timestamp="1525178930000"/>
-    <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl.filters{GrayscaleFilter.java[GrayscaleFilter" modifiers="1" timestamp="1525969473000"/>
-    <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl.filters{ThresholdFilter.java[ThresholdFilter" modifiers="1" timestamp="1526030211000"/>
+    <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl.filters{GrayscaleFilter.java[GrayscaleFilter" modifiers="1" timestamp="1526048148000"/>
+    <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl.filters{ThresholdFilter.java[ThresholdFilter" modifiers="1" timestamp="1526209919000"/>
+    <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl.filters{WatermarkFilter.java[WatermarkFilter" modifiers="17" timestamp="1526210769000"/>
+    <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl{Watermarker.java[Watermarker" modifiers="1" timestamp="1526211031000"/>
+    <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl.supplier{ImageWatermarkSupplier.java[ImageWatermarkSupplier" modifiers="17" timestamp="1526210638000"/>
 </typeInfoHistroy>

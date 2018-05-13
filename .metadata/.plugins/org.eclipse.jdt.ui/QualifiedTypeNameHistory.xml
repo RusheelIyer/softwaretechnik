@@ -11,11 +11,17 @@
     <fullyQualifiedTypeName name="java.nio.file.StandardCopyOption"/>
     <fullyQualifiedTypeName name="org.junit.Ignore"/>
     <fullyQualifiedTypeName name="org.iMage.shutterpile.port.IFilter"/>
+    <fullyQualifiedTypeName name="com.sun.prism.Graphics"/>
+    <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.GrayscaleFilter"/>
+    <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.ThresholdFilter"/>
+    <fullyQualifiedTypeName name="java.awt.Image"/>
+    <fullyQualifiedTypeName name="java.awt.Graphics2D"/>
+    <fullyQualifiedTypeName name="java.awt.AlphaComposite"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="java.awt.Graphics"/>
+    <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.WatermarkFilter"/>
+    <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.supplier.ImageWatermarkSupplier"/>
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="java.awt.Image"/>
-    <fullyQualifiedTypeName name="com.sun.prism.Graphics"/>
-    <fullyQualifiedTypeName name="java.awt.Graphics"/>
-    <fullyQualifiedTypeName name="java.awt.Color"/>
     <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
 </qualifiedTypeNameHistroy>

@@ -62,7 +62,7 @@ public class GrayscaleFilterTest {
 	 */
 	@Test
 	public void applyTestAlpha() {
-		File testFile = new File("src/test/resources/pearWatermark_input_alpha_small.png");
+		File testFile = new File("src/test/resources/pearWatermark_input_alpha.png");
 		try {
 			BufferedImage testImage = ImageIO.read(testFile);
 			BufferedImage newImage = filter.apply(testImage);
