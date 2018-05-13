@@ -1,4 +1,4 @@
-package org.iMage.shutterpile.impl.filters;
+package org.iMage.shutterpile.impl.supplier;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
@@ -11,7 +11,8 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import org.iMage.shutterpile.impl.supplier.ImageWatermarkSupplier;
+import org.iMage.shutterpile.impl.filters.GrayscaleFilter;
+import org.iMage.shutterpile.impl.filters.ThresholdFilter;
 import org.junit.Test;
 
 /**
@@ -70,14 +71,6 @@ public class ImageWatermarkSupplierTest {
 			e.printStackTrace();
 		}
 		
-	}
-	
-	/**
-	 * Test that returned watermark is in grayscale
-	 */
-	@Test
-	public void grayscaleTest() {
-		//TODO: Test
 	}
 
 }
