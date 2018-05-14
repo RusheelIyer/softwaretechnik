@@ -1,4 +1,10 @@
 <changelog><commit>
+					<time>1526232513</time>
+					<sha1>6e861327ee0967f723f079c7787c8d30b5f42b89</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>using smaller image file to reduce file size</msg>
+				</commit><commit>
 					<time>1526231787</time>
 					<sha1>55eb1447ad97191ab75618102dd6364e0f03b078</sha1>
 					<author>Rusheel</author>
