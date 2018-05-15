@@ -1,9 +1,9 @@
 *.tex
-Lastenheft.log
-Lastenheft.out
-Lastenheft.aux
-Lastenheft.synctex.gz
-Lastenheft.dvi
+*.log
+*.out
+*.aux
+*.synctex.gz
+*.dvi
 Lastenheft.glg
 Lastenheft.glo
 Lastenheft.gls

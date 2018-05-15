@@ -32,14 +32,16 @@ public class WatermarkerTest {
 	@Test
 	public void generateSizeTest() {
 		
-		baseFile = new File("src/test/resources/brightPicture_no_alpha_small.png");
-		watermarkFile = new File("src/test/resources/pearWatermark_input_alpha.png");
+		baseFile = new File("src/test/resources/colorfulPicture_alpha.png");
+		watermarkFile = new File("src/test/resources/pearWatermark.png");
 		try {
 			baseImage = ImageIO.read(baseFile);
 			watermark = ImageIO.read(watermarkFile);
 			supplier = new ImageWatermarkSupplier(watermark);
 			watermarker = new Watermarker(supplier);
-			BufferedImage finalPic = watermarker.generate(baseImage, 30);
+			BufferedImage finalPic = watermarker.generate(baseImage, 10);
+			File outputFile = new File("src/test/resources/final.png");
+			ImageIO.write(finalPic, "png", outputFile);
 			assertEquals(baseImage.getWidth(), finalPic.getWidth());
 			assertEquals(baseImage.getHeight(), finalPic.getHeight());
 		} catch (IOException e) {

@@ -58,7 +58,7 @@ public final class WatermarkFilter implements IFilter {
     g.dispose();
     
     Graphics2D g2d = watermarkedImage.createGraphics();
-    AlphaComposite ac = AlphaComposite.getInstance(AlphaComposite.SRC_OVER);
+    AlphaComposite ac = AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.0f);
     g2d.setComposite(ac);
     int x = (watermarkedImage.getWidth() - tiledWatermark.getWidth()) / 2;
     int y = (watermarkedImage.getHeight() - tiledWatermark.getHeight()) / 2;
