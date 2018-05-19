@@ -1,5 +1,9 @@
 package org.iMage.plugins;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.ServiceLoader;
+
 /**
  * Knows all available plug-ins and is responsible for using the service loader API to detect them.
  *
@@ -23,7 +27,17 @@ public final class PluginManager {
    *          according to their class names.
    */
   public static Iterable<JmjrstPlugin> getPlugins() {
-    //TODO: implement me!
+	  
+	  ArrayList<JmjrstPlugin> plugins = new ArrayList<JmjrstPlugin>();
+	  ServiceLoader<JmjrstPlugin> serviceLoader = ServiceLoader.load(JmjrstPlugin.class);
+	  
+	  for (JmjrstPlugin plugin : serviceLoader) {
+		  plugins.add(plugin);
+	  }
+	  
+	  Collections.sort(plugins);
+	  return plugins;
+	  
   }
 
 }
