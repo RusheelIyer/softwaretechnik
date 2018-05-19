@@ -3,7 +3,7 @@
     <typeInfo handle="=jmjrst.main/src\/main\/java&lt;org.jis.generator{Generator.java[Generator" modifiers="1" timestamp="1525178930000"/>
     <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl.filters{GrayscaleFilter.java[GrayscaleFilter" modifiers="1" timestamp="1526231380000"/>
     <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl.filters{ThresholdFilter.java[ThresholdFilter" modifiers="1" timestamp="1526231380000"/>
-    <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl.filters{WatermarkFilter.java[WatermarkFilter" modifiers="17" timestamp="1526231380000"/>
+    <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl.filters{WatermarkFilter.java[WatermarkFilter" modifiers="17" timestamp="1526293990000"/>
     <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl{Watermarker.java[Watermarker" modifiers="1" timestamp="1526231380000"/>
     <typeInfo handle="=iMage.shutterpile/src\/main\/java&lt;org.iMage.shutterpile.impl.supplier{ImageWatermarkSupplier.java[ImageWatermarkSupplier" modifiers="17" timestamp="1526231380000"/>
 </typeInfoHistroy>
