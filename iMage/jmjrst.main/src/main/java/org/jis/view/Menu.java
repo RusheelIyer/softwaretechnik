@@ -158,29 +158,36 @@ public class Menu extends JMenuBar {
           .equalsIgnoreCase("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel")) optionen_look.add(look_nimbus); //$NON-NLS-1$
     }
     ArrayList<JmjrstPlugin> pluginList = (ArrayList<JmjrstPlugin>) PluginManager.getPlugins();
-    for (int i = 0; i < pluginList.size(); i++) {
+    if (pluginList.isEmpty()) {
+    	JMenuItem noPlugins = new JMenuItem("(Nothing to load here!)");
+    	addPlugin.add(noPlugins);
+    } else {
     	
-    	JmjrstPlugin currentPlugin = pluginList.get(i);
-    	currentPlugin.init(m);
-    	JMenuItem start = new JMenuItem("Start " + currentPlugin.getName());
-    	start.addActionListener(new ActionListener() {
-    		@Override
-    		public void actionPerformed(ActionEvent e) {
-    			currentPlugin.run();
-    		}
-    	});
-    	addPlugin.add(start);
-    	
-    	if (currentPlugin.isConfigurable()) {
-    		JMenuItem configure = new JMenuItem("Configure " + currentPlugin.getName());
+    	for (int i = 0; i < pluginList.size(); i++) {
+        	
+        	JmjrstPlugin currentPlugin = pluginList.get(i);
+        	currentPlugin.init(m);
+        	JMenuItem start = new JMenuItem("Start " + currentPlugin.getName());
         	start.addActionListener(new ActionListener() {
         		@Override
         		public void actionPerformed(ActionEvent e) {
-        			currentPlugin.configure();
+        			currentPlugin.run();
         		}
         	});
-        	addPlugin.add(configure);
-    	}
+        	addPlugin.add(start);
+        	
+        	if (currentPlugin.isConfigurable()) {
+        		JMenuItem configure = new JMenuItem("Configure " + currentPlugin.getName());
+            	start.addActionListener(new ActionListener() {
+            		@Override
+            		public void actionPerformed(ActionEvent e) {
+            			currentPlugin.configure();
+            		}
+            	});
+            	addPlugin.add(configure);
+        	}
+        	
+        }
     	
     }
   }

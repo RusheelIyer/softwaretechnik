@@ -4415,3 +4415,21 @@ org.eclipse.core.runtime.CoreException: Launch configuration GeneratorTest2 refe
 2018-05-19 17:29:44,877 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
 2018-05-19 17:29:44,880 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-05-19 17:29:44,880 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-19 17:30:44,462 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-19 17:30:44,465 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-19 17:30:44,467 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-19 17:30:44,468 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-19 17:31:25,442 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-19 17:31:25,448 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2018-05-19 17:31:25,450 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-19 17:31:25,451 [Worker-32] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-19 17:31:57,683 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-19 17:31:57,686 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2018-05-19 17:31:57,688 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-19 17:31:57,689 [Worker-34] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-19 17:32:06,522 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-19 17:32:06,525 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 19 resources
+2018-05-19 17:32:06,530 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-19 17:32:06,530 [Worker-35] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2018-05-19 17:32:23,060 [Worker-28] INFO  o.e.m.i.launch.MavenLaunchDelegate - /Users/rusheeliyer/softwaretechnik/iMage
+2018-05-19 17:32:23,062 [Worker-28] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn -B package
