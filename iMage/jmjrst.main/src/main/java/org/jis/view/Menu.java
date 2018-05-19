@@ -15,7 +15,10 @@
  */
 package org.jis.view;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.net.URL;
+import java.util.ArrayList;
 
 import javax.swing.ImageIcon;
 import javax.swing.JMenu;
@@ -23,6 +26,8 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.UIManager;
 
+import org.iMage.plugins.JmjrstPlugin;
+import org.iMage.plugins.PluginManager;
 import org.jis.Main;
 import org.jis.listner.MenuListner;
 
@@ -151,6 +156,32 @@ public class Menu extends JMenuBar {
       .equalsIgnoreCase("com.sun.java.swing.plaf.gtk.GTKLookAndFeel")) optionen_look.add(look_gtk); //$NON-NLS-1$
       if (uii[i].toString().substring(uii[i].toString().lastIndexOf(" ") + 1, uii[i].toString().lastIndexOf("]")) //$NON-NLS-1$ //$NON-NLS-2$
           .equalsIgnoreCase("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel")) optionen_look.add(look_nimbus); //$NON-NLS-1$
+    }
+    ArrayList<JmjrstPlugin> pluginList = (ArrayList<JmjrstPlugin>) PluginManager.getPlugins();
+    for (int i = 0; i < pluginList.size(); i++) {
+    	
+    	JmjrstPlugin currentPlugin = pluginList.get(i);
+    	currentPlugin.init(m);
+    	JMenuItem start = new JMenuItem("Start " + currentPlugin.getName());
+    	start.addActionListener(new ActionListener() {
+    		@Override
+    		public void actionPerformed(ActionEvent e) {
+    			currentPlugin.run();
+    		}
+    	});
+    	addPlugin.add(start);
+    	
+    	if (currentPlugin.isConfigurable()) {
+    		JMenuItem configure = new JMenuItem("Configure " + currentPlugin.getName());
+        	start.addActionListener(new ActionListener() {
+        		@Override
+        		public void actionPerformed(ActionEvent e) {
+        			currentPlugin.configure();
+        		}
+        	});
+        	addPlugin.add(configure);
+    	}
+    	
     }
   }
 
