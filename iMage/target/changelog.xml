@@ -1,4 +1,10 @@
 <changelog><commit>
+					<time>1526810372</time>
+					<sha1>156adb304940dc3efd6614de8c51d40f2c8a927e</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>implemented run method</msg>
+				</commit><commit>
 					<time>1526809038</time>
 					<sha1>aa364d6f90d726b93dd6bbeca5f0e6f464855bc1</sha1>
 					<author>Rusheel</author>

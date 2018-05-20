@@ -5,12 +5,14 @@ import java.io.File;
 import javax.swing.JOptionPane;
 
 import org.jis.Main;
+import org.kohsuke.MetaInfServices;
 
 /**
  * Facezine Plugin
  * @author rusheeliyer
  *
  */
+@MetaInfServices(JmjrstPlugin.class)
 public class Facezine extends JmjrstPlugin {
 
 	private Main mainClass;

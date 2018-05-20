@@ -6,12 +6,17 @@
     <version>0.0.1-SNAPSHOT</version>
   </parent>
   <artifactId>2091489</artifactId>
+  <groupId>swt1.ub3.a2</groupId>
   <dependencies>
   	<dependency>
   		<groupId>swt1.ub3.a1</groupId>
   		<artifactId>2091489</artifactId>
   		<version>0.0.1-SNAPSHOT</version>
   	</dependency>
+  	<dependency>
+  		<groupId>org.kohsuke.metainf-services</groupId>
+  		<artifactId>metainf-services</artifactId>
+  		<optional>true</optional>
+  	</dependency>
   </dependencies>
-  <groupId>swt1.ub3.a2</groupId>
 </project>
