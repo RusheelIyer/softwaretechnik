@@ -2007,3 +2007,13 @@ Caused by: org.eclipse.core.internal.resources.ResourceException: A resource exi
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
 !SUBENTRY 1 org.eclipse.core.resources 4 275 2018-05-20 11:15:20.614
 !MESSAGE A resource exists with a different case: '/iMage.facezine-plugin/src/main/java/org/iMage/plugins/Facezine'.
+!SESSION 2018-05-20 12:25:42.734 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=10.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/rusheeliyer/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/rusheeliyer/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-05-20 12:25:51.334
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

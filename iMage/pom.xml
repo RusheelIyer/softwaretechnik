@@ -21,6 +21,7 @@
   	<module>iMage.shutterpile</module>
   	<module>iMage.shutterpile-cli</module>
   	<module>iMage.facezine-plugin</module>
+  	<module>iMage.bundle</module>
   </modules>
   <build>
     <plugins>
@@ -30,9 +31,13 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>org.jis.Main</mainClass>
+              <mainClass>org.iMage.bundle.App</mainClass>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
+              <classpathLayoutType>
+                repository
+              </classpathLayoutType>
+              <useUniqueVersions>false</useUniqueVersions>
               <addDefaultImplementationEntries>
               true
               </addDefaultImplementationEntries>
@@ -54,11 +59,14 @@
       				<goal>copy-dependencies</goal>
       			</goals>
       			<configuration>
+      			   <useRepositoryLayout>true</useRepositoryLayout>
+      			   <overWriteSnapshots>true</overWriteSnapshots>
+      			   <overWriteIfNewer>true</overWriteIfNewer>
       				<outputDirectory>
       					${project.build.directory}/lib
       				</outputDirectory>
       				<includeScope>
-      					compile
+      					runtime
    					</includeScope>
       			</configuration>
       		</execution>
