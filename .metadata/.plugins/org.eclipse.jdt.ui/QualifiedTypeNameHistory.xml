@@ -25,4 +25,10 @@
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
     <fullyQualifiedTypeName name="java.io.File"/>
+    <fullyQualifiedTypeName name="java.util.ServiceLoader"/>
+    <fullyQualifiedTypeName name="java.util.Collections"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.iMage.plugins.JmjrstPlugin"/>
+    <fullyQualifiedTypeName name="org.iMage.plugins.PluginManager"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
 </qualifiedTypeNameHistroy>

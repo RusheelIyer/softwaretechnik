@@ -20,6 +20,7 @@
   	
   	<module>iMage.shutterpile</module>
   	<module>iMage.shutterpile-cli</module>
+  	<module>iMage.facezine-plugin</module>
   </modules>
   <build>
     <plugins>

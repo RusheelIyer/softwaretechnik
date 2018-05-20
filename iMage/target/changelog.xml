@@ -1,4 +1,52 @@
 <changelog><commit>
+					<time>1526743980</time>
+					<sha1>94a656026aa522fc32503bed6298b1c8c88ada66</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>added exception handling incase no plugin is available</msg>
+				</commit><commit>
+					<time>1526743816</time>
+					<sha1>1e68e1c4f77b69db5943bc7a60540beb6646f45c</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>created start and configure menu items for the plugins</msg>
+				</commit><commit>
+					<time>1526741132</time>
+					<sha1>022b55ae037c6657925bf03988d0c8569821b454</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>created new menu item Plugins with submenu add-plugin</msg>
+				</commit><commit>
+					<time>1526739561</time>
+					<sha1>842570f1071f9b85d1c1a773e171069245ba7b19</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>implemented getPlugins() method in PluginManager</msg>
+				</commit><commit>
+					<time>1526738723</time>
+					<sha1>bb4334a2df75e5e8846213316e449357bdb17c57</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Implemented compareTo method for Jmjrstplugin class</msg>
+				</commit><commit>
+					<time>1526381032</time>
+					<sha1>6adc94ced86e4d146f1d96006992280b05379b2b</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>Completed the feasibility study</msg>
+				</commit><commit>
+					<time>1526377067</time>
+					<sha1>b4be43b9fb243c250e4346d6acb7a47949bc6797</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>First Commit Durchfuehrbarkeitsuntersuchung</msg>
+				</commit><commit>
+					<time>1526293505</time>
+					<sha1>20cf2a9aec9c33c0669b50c928d05f23f9756d7c</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>added pom dependencies</msg>
+				</commit><commit>
 					<time>1526232513</time>
 					<sha1>6e861327ee0967f723f079c7787c8d30b5f42b89</sha1>
 					<author>Rusheel</author>
