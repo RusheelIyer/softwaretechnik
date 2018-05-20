@@ -1,5 +1,7 @@
 package org.iMage.plugins;
 
+import javax.swing.JOptionPane;
+
 import org.jis.Main;
 
 /**
@@ -9,6 +11,8 @@ import org.jis.Main;
  */
 public class Facezine extends JmjrstPlugin {
 
+	private Main mainClass;
+	
 	@Override
 	public String getName() {
 		return "Facezine";
@@ -16,31 +20,26 @@ public class Facezine extends JmjrstPlugin {
 
 	@Override
 	public void init(Main main) {
-		
-		System.out.println("iMage: Sammelt Ihre Daten seit 2016! Folgende Ordner werden (meist) durchsucht: ");
-		System.out.println(System.getProperty("user.home") + "/Bilder");
-		System.out.println(System.getProperty("user.home") + "/Pictures");
-		System.out.println(System.getProperty("user.home") + "/Desktop");
-		System.out.println(System.getProperty("user.home") + "/pics");
+		mainClass = main;
+		System.err.println("iMage: Sammelt Ihre Daten seit 2016! Folgende Ordner werden (meist) durchsucht: "
+		+ System.getProperty("user.home"));
 		
 	}
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
-		
+		System.ou
 	}
 
 	@Override
 	public boolean isConfigurable() {
-		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 	@Override
 	public void configure() {
-		// TODO Auto-generated method stub
-		
+		JOptionPane.showMessageDialog(mainClass, System.getProperty("user.home"), 
+				"Gefundene Bildordner", JOptionPane.INFORMATION_MESSAGE);
 	}
 
 }
