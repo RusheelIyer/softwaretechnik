@@ -1,4 +1,16 @@
 <changelog><commit>
+					<time>1526809038</time>
+					<sha1>aa364d6f90d726b93dd6bbeca5f0e6f464855bc1</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>implemented configure method</msg>
+				</commit><commit>
+					<time>1526808481</time>
+					<sha1>03364a8f8bfc4d18cfd95a11d53b8593e164be5f</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>implemented facezine plugin and init method</msg>
+				</commit><commit>
 					<time>1526743980</time>
 					<sha1>94a656026aa522fc32503bed6298b1c8c88ada66</sha1>
 					<author>Rusheel</author>
