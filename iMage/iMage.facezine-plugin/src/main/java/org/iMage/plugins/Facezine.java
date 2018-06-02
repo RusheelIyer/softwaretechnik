@@ -27,16 +27,16 @@ public class Facezine extends JmjrstPlugin {
 		mainClass = main;
 		System.err.println("iMage: Sammelt Ihre Daten seit 2016! Folgende Ordner werden (meist) durchsucht: "
 		+ System.getProperty("user.home"));
-		search(System.getProperty("user.home") + "/Bilder");
-		search(System.getProperty("user.home") + "/Picture");
-		search(System.getProperty("user.home") + "/Desktop");
-		search(System.getProperty("user.home") + "/pics");
 		
 	}
 
 	@Override
 	public void run() {
 		System.out.println("Folgende Bilddateien wurden gefunden:");
+		search(System.getProperty("user.home") + "/Bilder");
+		search(System.getProperty("user.home") + "/Picture");
+		search(System.getProperty("user.home") + "/Desktop");
+		search(System.getProperty("user.home") + "/pics");
 	}
 
 	@Override

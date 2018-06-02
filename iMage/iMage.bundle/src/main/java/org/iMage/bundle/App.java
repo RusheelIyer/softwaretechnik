@@ -12,9 +12,7 @@ public class App {
 	 * @param args arguments
 	 */
 	public static void main(String[] args) {
-		
 		org.jis.Main.main(args);
-		
 	}
 
 }

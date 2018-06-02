@@ -41,6 +41,25 @@ public final class ImageWatermarkSupplier implements IWatermarkSupplier {
   public ImageWatermarkSupplier(BufferedImage watermarkInput) {
     this(watermarkInput, true);
   }
+  
+  /**
+   * Create the {@link IWatermarkSupplier} by base image of watermark.
+   *
+   * @param watermarkInput
+   *          the base image to create the watermark
+   * @param useGrayscaleFilter
+   *          indicates whether a {@link GrayscaleFilter} shall applied upon the input image
+   * @param threshold
+   * 			threshold value to be applied to the watermark
+   */
+  public ImageWatermarkSupplier(BufferedImage watermarkInput, boolean useGrayscaleFilter, int threshold) {
+	  
+	  ThresholdFilter tFilter = new ThresholdFilter();
+	  BufferedImage thresholdWatermark = tFilter.apply(watermarkInput, threshold);
+	  this.watermarkInput = thresholdWatermark;
+	  this.useGrayscaleFilter = useGrayscaleFilter;
+	  
+  }
 
   /**
    * Create the {@link IWatermarkSupplier} by base image of watermark.

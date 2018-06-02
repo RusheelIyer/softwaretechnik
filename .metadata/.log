@@ -2017,3 +2017,81 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.eclipse.core.net 1 0 2018-05-20 12:25:51.334
 !MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY net.sf.eclipsecs.core 4 0 2018-05-20 13:00:38.769
+!MESSAGE Checkstyle-Plugin: Exception was thrown while processing /Users/rusheeliyer/softwaretechnik/iMage/iMage.facezine-plugin/src/main/java/org/iMage/plugins/Facezine.java
+!STACK 0
+com.puppycrawl.tools.checkstyle.api.CheckstyleException: Exception was thrown while processing /Users/rusheeliyer/softwaretechnik/iMage/iMage.facezine-plugin/src/main/java/org/iMage/plugins/Facezine.java
+	at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:299)
+	at com.puppycrawl.tools.checkstyle.Checker.process(Checker.java:217)
+	at net.sf.eclipsecs.core.builder.Auditor.runAudit(Auditor.java:158)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.handleBuildSelection(CheckstyleBuilder.java:306)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:172)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:142)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:232)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: MismatchedTokenException occurred while parsing file /Users/rusheeliyer/softwaretechnik/iMage/iMage.facezine-plugin/src/main/java/org/iMage/plugins/Facezine.java.
+	at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:100)
+	at com.puppycrawl.tools.checkstyle.TreeWalker.processFiltered(TreeWalker.java:181)
+	at com.puppycrawl.tools.checkstyle.api.AbstractFileSetCheck.process(AbstractFileSetCheck.java:83)
+	at com.puppycrawl.tools.checkstyle.Checker.processFile(Checker.java:320)
+	at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:290)
+	... 16 more
+Caused by: /Users/rusheeliyer/softwaretechnik/iMage/iMage.facezine-plugin/src/main/java/org/iMage/plugins/Facezine.java:23:2: expecting EOF, found '}'
+	at antlr.Parser.match(Parser.java:211)
+	at com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer.compilationUnit(GeneratedJavaRecognizer.java:211)
+	at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:94)
+	... 20 more
+
+!ENTRY net.sf.eclipsecs.core 4 0 2018-05-20 13:00:41.164
+!MESSAGE Checkstyle-Plugin: Exception was thrown while processing /Users/rusheeliyer/softwaretechnik/iMage/iMage.facezine-plugin/src/main/java/org/iMage/plugins/Facezine.java
+!STACK 0
+com.puppycrawl.tools.checkstyle.api.CheckstyleException: Exception was thrown while processing /Users/rusheeliyer/softwaretechnik/iMage/iMage.facezine-plugin/src/main/java/org/iMage/plugins/Facezine.java
+	at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:299)
+	at com.puppycrawl.tools.checkstyle.Checker.process(Checker.java:217)
+	at net.sf.eclipsecs.core.builder.Auditor.runAudit(Auditor.java:158)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.handleBuildSelection(CheckstyleBuilder.java:306)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:172)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:142)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:232)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: MismatchedTokenException occurred while parsing file /Users/rusheeliyer/softwaretechnik/iMage/iMage.facezine-plugin/src/main/java/org/iMage/plugins/Facezine.java.
+	at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:100)
+	at com.puppycrawl.tools.checkstyle.TreeWalker.processFiltered(TreeWalker.java:181)
+	at com.puppycrawl.tools.checkstyle.api.AbstractFileSetCheck.process(AbstractFileSetCheck.java:83)
+	at com.puppycrawl.tools.checkstyle.Checker.processFile(Checker.java:320)
+	at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:290)
+	... 16 more
+Caused by: /Users/rusheeliyer/softwaretechnik/iMage/iMage.facezine-plugin/src/main/java/org/iMage/plugins/Facezine.java:23:2: expecting EOF, found '}'
+	at antlr.Parser.match(Parser.java:211)
+	at com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer.compilationUnit(GeneratedJavaRecognizer.java:211)
+	at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:94)
+	... 20 more
+!SESSION 2018-06-02 07:54:19.065 -----------------------------------------------
+eclipse.buildId=4.7.3.M20180330-0640
+java.version=10.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_DE
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/rusheeliyer/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/rusheeliyer/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-06-02 07:54:29.497
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences

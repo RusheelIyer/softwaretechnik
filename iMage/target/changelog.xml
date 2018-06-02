@@ -1,4 +1,16 @@
 <changelog><commit>
+					<time>1526813537</time>
+					<sha1>e5249e3ec22ea57cdda923e0dc20d8115cd35fa2</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>First Commit iMage.bundle</msg>
+				</commit><commit>
+					<time>1526811024</time>
+					<sha1>9f28590cc4eaff91d60754109dd1ebf7e82b53da</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>generated required service files</msg>
+				</commit><commit>
 					<time>1526810372</time>
 					<sha1>156adb304940dc3efd6614de8c51d40f2c8a927e</sha1>
 					<author>Rusheel</author>

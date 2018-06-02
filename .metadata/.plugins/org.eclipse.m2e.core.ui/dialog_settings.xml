@@ -7,8 +7,9 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="iMage.facezine-plugin"/>
+			<item value="iMage.bundle"/>
 			<item value="iMage"/>
+			<item value="iMage.facezine-plugin"/>
 			<item value="iMage.shutterpile-cli"/>
 			<item value="iMage.shutterpile"/>
 		</list>
@@ -66,6 +67,7 @@
 	</section>
 	<section name="MavenModuleWizardParentPage">
 		<list key="moduleName">
+			<item value="iMage.bundle"/>
 			<item value="iMage.facezine-plugin"/>
 			<item value="iMage.shutterpile-cli"/>
 			<item value="iMage.shutterpile"/>
@@ -95,13 +97,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="org.iMage.facezine.plugin"/>
+			<item value="org.iMage.bundle"/>
 		</list>
 		<list key="groupId">
 			<item value="swt1"/>
 		</list>
 		<list key="artifactId">
-			<item value="iMage.facezine-plugin"/>
+			<item value="iMage.bundle"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
