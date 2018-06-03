@@ -2,13 +2,15 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="swt1.ub4.a1"/>
 			<item value="swt1"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="iMage.bundle"/>
+			<item value="iMage.iDeal"/>
 			<item value="iMage"/>
+			<item value="iMage.bundle"/>
 			<item value="iMage.facezine-plugin"/>
 			<item value="iMage.shutterpile-cli"/>
 			<item value="iMage.shutterpile"/>
@@ -67,6 +69,7 @@
 	</section>
 	<section name="MavenModuleWizardParentPage">
 		<list key="moduleName">
+			<item value="iMage.iDeal"/>
 			<item value="iMage.bundle"/>
 			<item value="iMage.facezine-plugin"/>
 			<item value="iMage.shutterpile-cli"/>
@@ -97,13 +100,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="org.iMage.bundle"/>
+			<item value="org.iMage.iDeal"/>
 		</list>
 		<list key="groupId">
 			<item value="swt1"/>
 		</list>
 		<list key="artifactId">
-			<item value="iMage.bundle"/>
+			<item value="iMage.iDeal"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
