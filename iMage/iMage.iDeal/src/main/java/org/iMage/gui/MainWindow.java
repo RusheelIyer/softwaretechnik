@@ -1,7 +1,8 @@
 package org.iMage.gui;
 
 import java.awt.EventQueue;
-import java.awt.Image;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
 import java.io.File;
 import java.io.IOException;
 
@@ -10,6 +11,7 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 
 /**
@@ -30,9 +32,14 @@ public class MainWindow extends JFrame {
 	 */
 	private JButton watermark; 
 	/**
-	 * button with watermarked image preview
+	 * label with watermarked image preview
 	 */
-	private JButton output;
+	private JLabel output;
+	
+	/**
+	 * init buttons
+	 */
+	private JButton init;
 	
 	/**
 	 * get original button
@@ -48,14 +55,6 @@ public class MainWindow extends JFrame {
 	 */
 	public JButton getWatermark() {
 		return watermark;
-	}
-
-	/**
-	 * get output button
-	 * @return output
-	 */
-	public JButton getOutput() {
-		return output;
 	}
 	
 	/**
@@ -74,7 +73,7 @@ public class MainWindow extends JFrame {
 			original.setSize(200, 150);
 			watermark = new JButton(new ImageIcon(ImageIO.read(new File("src/main/resources/Watermark.png"))));
 			watermark.setSize(100, 100);
-			output = new JButton(new ImageIcon(ImageIO.read(new File("src/main/resources/Output.png"))));
+			output = new JLabel(new ImageIcon(ImageIO.read(new File("src/main/resources/Output.png"))));
 			output.setSize(200, 150);
 			
 		} catch (IOException e) {
@@ -95,13 +94,34 @@ public class MainWindow extends JFrame {
 	public void showPicturePanel() {
 		
 		JPanel picturePanel = new JPanel();
-		picturePanel.add(original);
-		picturePanel.add(watermark);
-		picturePanel.add(output);
+		picturePanel.setLayout(new GridBagLayout());
+		GridBagConstraints gbc = new GridBagConstraints();
+		init = new JButton("Init");
+		
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		gbc.gridheight = 2;
+		picturePanel.add(original, gbc);
+		
+		gbc.gridx = 1;
+		gbc.gridy = 0;
+		gbc.gridheight = 1;
+		picturePanel.add(watermark, gbc);
+		
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		picturePanel.add(init, gbc);
+		
+		gbc.gridx = 2;
+		gbc.gridy = 0;
+		gbc.gridheight = 2;
+		picturePanel.add(output, gbc);
 		picturePanel.setVisible(true);
 		getContentPane().add(picturePanel);
 		
 	}
+	
+	
 	
 	/**
 	 * main method 
