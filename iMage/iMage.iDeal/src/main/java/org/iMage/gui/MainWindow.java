@@ -1,9 +1,7 @@
-package iMage.iDeal;
+package org.iMage.gui;
 
-import java.awt.Dimension;
 import java.awt.EventQueue;
-import java.awt.GridLayout;
-import java.awt.image.BufferedImage;
+import java.awt.Image;
 import java.io.File;
 import java.io.IOException;
 
@@ -12,17 +10,58 @@ import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
 
-public class mainWindow extends JFrame {
+/**
+ * main window for the GUI
+ * 
+ * @author rusheeliyer
+ *
+ */
+public class MainWindow extends JFrame {
 	
 	JFrame frame;
-	public JButton original;
-	public JButton watermark;
-	public JButton output;
+	/**
+	 * button with input preview
+	 */
+	private JButton original;
+	/**
+	 * button with watermark preview
+	 */
+	private JButton watermark; 
+	/**
+	 * button with watermarked image preview
+	 */
+	private JButton output;
 	
-	mainWindow(){
+	/**
+	 * get original button
+	 * @return original
+	 */
+	public JButton getOriginal() {
+		return original;
+	}
+	
+	/**
+	 * get watermark button
+	 * @return watermark
+	 */
+	public JButton getWatermark() {
+		return watermark;
+	}
+
+	/**
+	 * get output button
+	 * @return output
+	 */
+	public JButton getOutput() {
+		return output;
+	}
+	
+	/**
+	 * operation on the main window frame
+	 */
+	MainWindow() {
 		setSize(700, 500);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
@@ -46,9 +85,13 @@ public class mainWindow extends JFrame {
 		
 		ImageListener listen = new ImageListener(this);
 		original.addActionListener(listen);
+		watermark.addActionListener(listen);
 		
 	}
 	
+	/**
+	 * display the picture previews on the main window
+	 */
 	public void showPicturePanel() {
 		
 		JPanel picturePanel = new JPanel();
@@ -60,15 +103,15 @@ public class mainWindow extends JFrame {
 		
 	}
 	
+	/**
+	 * main method 
+	 * @param args arguments
+	 */
 	public static void main(String[] args) {
 		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
-				try {
-					new mainWindow();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+				new MainWindow();
 			}
 		});
 		

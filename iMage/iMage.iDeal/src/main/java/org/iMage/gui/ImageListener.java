@@ -1,5 +1,6 @@
-package iMage.iDeal;
+package org.iMage.gui;
 
+import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -11,20 +12,30 @@ import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+/**
+ * Image Action Listener
+ * @author rusheeliyer
+ *
+ */
 public class ImageListener implements ActionListener {
 
-	mainWindow window;
+	MainWindow window;
 	
-	public ImageListener(mainWindow window) {
+	/**
+	 * Constructor
+	 * @param window main window
+	 */
+	public ImageListener(MainWindow window) {
 		this.window = window;
 	}
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		if (e.getSource() == window.original || e.getSource() == window.watermark) {
+		if (e.getSource() == window.getOriginal() || e.getSource() == window.getWatermark()) {
 			
 			setNewImage((JButton) e.getSource());
 			
@@ -32,19 +43,28 @@ public class ImageListener implements ActionListener {
 		
 	}
 
+	/**
+	 * Choose new image as input or watermark 
+	 * @param button the button whose image is to be replaced
+	 */
 	public void setNewImage(JButton button) {
 		
 		JFileChooser fc = new JFileChooser();
-		int returnVal = fc.showOpenDialog(button);
+		fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
 		fc.addChoosableFileFilter(new FileNameExtensionFilter("Image Files", ImageIO.getReaderFileSuffixes()));
+		int returnVal = fc.showOpenDialog(button);
 		
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
 			try {
 				
-				button.setIcon(new ImageIcon(ImageIO.read(fc.getSelectedFile())));
+				button.setIcon(new ImageIcon(ImageIO.read(fc.getSelectedFile()).getScaledInstance(
+						button.getWidth(), button.getHeight(), Image.SCALE_SMOOTH)));
 				
 			} catch (IOException e1) {
 				e1.printStackTrace();
+			}  catch (NullPointerException nullPointer) {
+				JOptionPane.showMessageDialog(window, "Please choose a valid image file", 
+						"Image File Error", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 		
