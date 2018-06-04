@@ -1,5 +1,7 @@
 package iMage.iDeal;
 
+import java.awt.Dimension;
+import java.awt.EventQueue;
 import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -8,14 +10,17 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import org.iMage.shutterpile.*;
 
 public class mainWindow extends JFrame {
 	
 	JFrame frame;
+	private JButton original;
+	private JButton watermark;
+	private JButton output;
 	
 	mainWindow(){
 		setSize(700, 500);
@@ -24,36 +29,48 @@ public class mainWindow extends JFrame {
 		setResizable(false);
 		setVisible(true);
 		
-		showPictures();
-		
-	}
-	
-	public void showPictures() {
-		
-		JPanel picturePanel = new JPanel();
-		picturePanel.setLayout(new GridLayout(0, 3, 5, 0));
-		
 		try {
 			
-			BufferedImage original = ImageIO.read(new File("src/main/resources/Input.png"));
-			BufferedImage watermark = ImageIO.read(new File("src/main/resources/Watermark.png"));
-			BufferedImage output = ImageIO.read(new File("src/main/resources/Output.png"));
-			
-			JLabel originalPic = new JLabel(new ImageIcon(original));
-			JLabel watermarkPic = new JLabel(new ImageIcon(watermark));
-			JLabel outputPic = new JLabel(new ImageIcon(output));
-			picturePanel.add(originalPic);
-			picturePanel.add(watermarkPic);
-			picturePanel.add(outputPic);
+			original = new JButton(new ImageIcon(ImageIO.read(new File("src/main/resources/Input.png"))));
+			original.setSize(200, 150);
+			watermark = new JButton(new ImageIcon(ImageIO.read(new File("src/main/resources/Watermark.png"))));
+			watermark.setSize(100, 100);
+			output = new JButton(new ImageIcon(ImageIO.read(new File("src/main/resources/Output.png"))));
+			output.setSize(200, 150);
 			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 		
+		showPicturePanel();
+		
+		
+		
+	}
+	
+	public void showPicturePanel() {
+		
+		JPanel picturePanel = new JPanel();
+		picturePanel.add(original);
+		picturePanel.add(watermark);
+		picturePanel.add(output);
+		picturePanel.setVisible(true);
+		getContentPane().add(picturePanel);
+		
 	}
 	
 	public static void main(String[] args) {
-		new mainWindow();
+		
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					new mainWindow();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		
 	}
 
 }
