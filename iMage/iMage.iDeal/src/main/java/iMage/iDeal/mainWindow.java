@@ -18,9 +18,9 @@ import javax.swing.JPanel;
 public class mainWindow extends JFrame {
 	
 	JFrame frame;
-	private JButton original;
-	private JButton watermark;
-	private JButton output;
+	public JButton original;
+	public JButton watermark;
+	public JButton output;
 	
 	mainWindow(){
 		setSize(700, 500);
@@ -44,7 +44,8 @@ public class mainWindow extends JFrame {
 		
 		showPicturePanel();
 		
-		
+		ImageListener listen = new ImageListener(this);
+		original.addActionListener(listen);
 		
 	}
 	
