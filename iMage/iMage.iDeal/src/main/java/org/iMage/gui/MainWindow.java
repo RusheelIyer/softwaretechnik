@@ -1,5 +1,6 @@
 package org.iMage.gui;
 
+import java.awt.Color;
 import java.awt.EventQueue;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -126,9 +127,12 @@ public class MainWindow extends JFrame {
 	 * operation on the main window frame
 	 */
 	MainWindow() {
+		
+		setTitle("iDeal");
 		setSize(700, 500);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLayout(new BoxLayout(getContentPane(), BoxLayout.Y_AXIS));
+		setLayout(new GridBagLayout());
+		GridBagConstraints gbc = new GridBagConstraints();
 		setResizable(false);
 		setVisible(true);
 		
@@ -151,7 +155,7 @@ public class MainWindow extends JFrame {
 		}
 		
 		showPicturePanel();
-		showImageAdjusters();
+		//showImageAdjusters();
 		
 	}
 	
@@ -160,35 +164,47 @@ public class MainWindow extends JFrame {
 	 */
 	public void showPicturePanel() {
 		
-		JPanel picturePanel = new JPanel();
-		picturePanel.setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
 		init = new JButton("Init");
 		
 		gbc.gridx = 0;
 		gbc.gridy = 0;
-		gbc.gridheight = 2;
-		picturePanel.add(original, gbc);
+		JLabel originalLabel = new JLabel("Original");
+		add(originalLabel, gbc);
 		
 		gbc.gridx = 1;
 		gbc.gridy = 0;
-		gbc.gridheight = 1;
-		picturePanel.add(watermark, gbc);
-		
-		gbc.gridx = 1;
-		gbc.gridy = 1;
-		picturePanel.add(init, gbc);
+		JLabel watermarkLabel = new JLabel("Watermark");
+		add(watermarkLabel, gbc);
 		
 		gbc.gridx = 2;
 		gbc.gridy = 0;
-		gbc.gridheight = 2;
-		picturePanel.add(output, gbc);
-		picturePanel.setVisible(true);
+		JLabel watermarkedLabel = new JLabel("Watermarked");
+		add(watermarkedLabel, gbc);
 		
-		ImageListener listen = new ImageListener(this);
+		gbc.gridx = 0;
+		gbc.gridy = 1;
+		gbc.gridheight = 2;
+		add(original, gbc);
+		
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		gbc.gridheight = 1;
+		add(watermark, gbc);
+		
+		gbc.gridx = 1;
+		gbc.gridy = 2;
+		add(init, gbc);
+		
+		gbc.gridx = 2;
+		gbc.gridy = 1;
+		gbc.gridheight = 2;
+		add(output, gbc);
+		
+		WindowListener listen = new WindowListener(this);
 		original.addActionListener(listen);
 		watermark.addActionListener(listen);
-		getContentPane().add(picturePanel);	
+		
 	}
 	
 	/**
@@ -197,7 +213,19 @@ public class MainWindow extends JFrame {
 	public void showImageAdjusters() {
 		
 		JPanel adjustPanel = new JPanel();
+		watermarkRow = new JTextField("1");
+		watermarkRow.setSize(100, JTextField.HEIGHT);
+		watermarkRow.setEditable(true);
 		
+		try {
+			watermarksPerRow = Integer.parseInt(watermarkRow.getText());
+		} catch (NumberFormatException e) {
+			watermarkRow.setForeground(Color.RED);
+		}
+		
+		adjustPanel.add(watermarkRow);
+		adjustPanel.setVisible(true);
+		getContentPane().add(adjustPanel);
 		
 	}
 	

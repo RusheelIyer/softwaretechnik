@@ -23,7 +23,7 @@ import org.iMage.shutterpile.impl.supplier.ImageWatermarkSupplier;
  * @author rusheeliyer
  *
  */
-public class ImageListener implements ActionListener {
+public class WindowListener implements ActionListener {
 
 	MainWindow window;
 	
@@ -31,7 +31,7 @@ public class ImageListener implements ActionListener {
 	 * Constructor
 	 * @param window main window
 	 */
-	public ImageListener(MainWindow window) {
+	public WindowListener(MainWindow window) {
 		this.window = window;
 	}
 	
