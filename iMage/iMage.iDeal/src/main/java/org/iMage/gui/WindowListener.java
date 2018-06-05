@@ -13,6 +13,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import org.iMage.shutterpile.impl.filters.WatermarkFilter;
 import org.iMage.shutterpile.impl.supplier.ImageWatermarkSupplier;
 
 /**
@@ -36,13 +37,11 @@ public class WindowListener implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		
 		if (e.getSource() == window.getOriginal() || e.getSource() == window.getWatermark()) {
-			
 			setNewImage((JButton) e.getSource());
-			
 		} else if (e.getSource() == window.getInitButton()) {
-			
-			changeWatermark(window.getWatermarkPic());
-			
+			changeWatermark();
+		} else if (e.getSource() == window.getRunButton()) {
+			runWatermarking();
 		}
 		
 	}
@@ -82,13 +81,28 @@ public class WindowListener implements ActionListener {
 	
 	/**
 	 * get the new watermark from the selected image
-	 * @param watermarkPic the selected image
 	 */
-	public void changeWatermark(BufferedImage watermarkPic) {
+	public void changeWatermark() {
 		
-		ImageWatermarkSupplier supplier = new ImageWatermarkSupplier(watermarkPic);
+		ImageWatermarkSupplier supplier = new ImageWatermarkSupplier(window.getWatermarkPic());
 		window.setWatermarkPic(supplier.getWatermark());
 		
+	}
+	
+	/**
+	 * output the picture with watermarks
+	 */
+	public void runWatermarking() {
+		
+		int watermarksPerRow = window.getWatermarksPerRow();
+		int watermarkWidth = window.getInput().getWidth() / watermarksPerRow;
+		if (watermarkWidth < 1 || watermarksPerRow == 0) {
+			JOptionPane.showMessageDialog(window, "Watermarks not visible anymore. "
+					+ "Please change amount of watermarks per row", "Watermarking Error", JOptionPane.ERROR_MESSAGE);
+		} else {
+			WatermarkFilter filter = new WatermarkFilter(window.getWatermarkPic(), watermarksPerRow);
+			window.setOutput(filter.apply(window.getInput()));
+		}
 	}
 	
 }

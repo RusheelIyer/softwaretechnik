@@ -44,7 +44,7 @@ public class MainWindow extends JFrame {
 	
 	private JButton original;
 	private JButton watermark; 
-	private JLabel output;
+	private JButton output;
 	private JButton initButton;
 	private JFormattedTextField watermarkRow;
 	private JSlider threshold;
@@ -58,7 +58,7 @@ public class MainWindow extends JFrame {
 	 * @return watermarksPerRow
 	 */
 	public int getWatermarksPerRow() {
-		return this.watermarksPerRow;
+		return Integer.parseInt(watermarkRow.getText());
 	}
 	
 	/**
@@ -81,7 +81,7 @@ public class MainWindow extends JFrame {
 	 * get output label
 	 * @return output
 	 */
-	public JLabel getOutput() {
+	public JButton getOutput() {
 		return output;
 	}
 	
@@ -191,7 +191,7 @@ public class MainWindow extends JFrame {
 			watermark.setSize(100, 100);
 			
 			outputPic = ImageIO.read(new File("src/main/resources/Output.png"));
-			output = new JLabel(new ImageIcon(outputPic));
+			output = new JButton(new ImageIcon(outputPic));
 			output.setSize(200, 150);
 			
 		} catch (IOException e) {
@@ -277,7 +277,10 @@ public class MainWindow extends JFrame {
 		gbc.gridy = 0;
 		adjustPanel.add(textLabel, gbc);
 		
-		watermarkRow = new JFormattedTextField(NumberFormat.getIntegerInstance());
+		NumberFormat format = NumberFormat.getIntegerInstance();
+		format.setGroupingUsed(false);
+		watermarkRow = new JFormattedTextField(format);
+		watermarkRow.setText("0");
 		watermarkRow.addFocusListener(new FocusListener() {
 
 			@Override
@@ -349,8 +352,10 @@ public class MainWindow extends JFrame {
 	public void finalButtons() {
 		
 		JPanel buttonPanel = new JPanel();
+		WindowListener listen = new WindowListener(this);
 		
 		runButton = new JButton("Run");
+		runButton.addActionListener(listen);
 		buttonPanel.add(runButton);
 		
 		saveButton = new JButton("Save");
