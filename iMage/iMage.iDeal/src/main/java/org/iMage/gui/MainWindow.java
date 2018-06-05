@@ -49,6 +49,8 @@ public class MainWindow extends JFrame {
 	private JFormattedTextField watermarkRow;
 	private JSlider threshold;
 	private JCheckBox grayscale;
+	private JButton runButton;
+	private JButton saveButton;
 	
 	/**
 	 * get watermarks per row
@@ -143,6 +145,22 @@ public class MainWindow extends JFrame {
 	}
 	
 	/**
+	 * get the run button
+	 * @return runButton
+	 */
+	public JButton getRunButton() {
+		return this.runButton;
+	}
+	
+	/**
+	 * get the save button
+	 * @return saveButton
+	 */
+	public JButton getSaveButton() {
+		return this.saveButton;
+	}
+	
+	/**
 	 * operation on the main window frame
 	 */
 	MainWindow() {
@@ -151,7 +169,6 @@ public class MainWindow extends JFrame {
 		setSize(700, 500);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
-		GridBagConstraints gbc = new GridBagConstraints();
 		setResizable(false);
 		setVisible(true);
 		
@@ -175,6 +192,7 @@ public class MainWindow extends JFrame {
 		
 		showPicturePanel();
 		showConfig();
+		finalButtons();
 		
 	}
 	
@@ -229,8 +247,7 @@ public class MainWindow extends JFrame {
 		WindowListener listen = new WindowListener(this);
 		original.addActionListener(listen);
 		watermark.addActionListener(listen);
-		picturePanel.setVisible(true);
-		getContentPane().add(picturePanel);
+		add(picturePanel);
 		
 	}
 	
@@ -313,8 +330,25 @@ public class MainWindow extends JFrame {
 		gbc.gridy = 2;
 		adjustPanel.add(grayscale, gbc);
 		
-		adjustPanel.setVisible(true);
 		getContentPane().add(adjustPanel);
+		
+	}
+	
+	/**
+	 * show the final panel with the run and save buttons
+	 */
+	public void finalButtons() {
+		
+		JPanel buttonPanel = new JPanel();
+		
+		runButton = new JButton("Run");
+		buttonPanel.add(runButton);
+		
+		saveButton = new JButton("Save");
+		buttonPanel.add(saveButton);
+		
+		
+		add(buttonPanel);
 		
 	}
 	
