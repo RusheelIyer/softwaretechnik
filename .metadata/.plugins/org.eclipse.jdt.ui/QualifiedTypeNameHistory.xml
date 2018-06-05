@@ -13,21 +13,18 @@
     <fullyQualifiedTypeName name="com.sun.prism.Graphics"/>
     <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.GrayscaleFilter"/>
     <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.ThresholdFilter"/>
-    <fullyQualifiedTypeName name="java.awt.Image"/>
     <fullyQualifiedTypeName name="java.awt.Graphics2D"/>
     <fullyQualifiedTypeName name="java.awt.AlphaComposite"/>
     <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.WatermarkFilter"/>
     <fullyQualifiedTypeName name="java.awt.Color"/>
     <fullyQualifiedTypeName name="java.awt.Graphics"/>
     <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.Watermarker"/>
-    <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.supplier.ImageWatermarkSupplier"/>
     <fullyQualifiedTypeName name="java.util.ServiceLoader"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.iMage.plugins.JmjrstPlugin"/>
     <fullyQualifiedTypeName name="org.iMage.plugins.PluginManager"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
-    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
     <fullyQualifiedTypeName name="org.kohsuke.MetaInfServices"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
@@ -36,7 +33,6 @@
     <fullyQualifiedTypeName name="javax.swing.JPanel"/>
     <fullyQualifiedTypeName name="java.awt.GridLayout"/>
     <fullyQualifiedTypeName name="java.io.File"/>
-    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
     <fullyQualifiedTypeName name="java.awt.EventQueue"/>
     <fullyQualifiedTypeName name="java.awt.Dimension"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
@@ -44,7 +40,14 @@
     <fullyQualifiedTypeName name="java.awt.Component"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
     <fullyQualifiedTypeName name="javax.imageio.ImageIO"/>
-    <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="javax.swing.ImageIcon"/>
     <fullyQualifiedTypeName name="javax.swing.filechooser.FileNameExtensionFilter"/>
+    <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.ScaleFilter"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="java.awt.Image"/>
+    <fullyQualifiedTypeName name="javax.swing.JLabel"/>
+    <fullyQualifiedTypeName name="java.awt.GridBagLayout"/>
+    <fullyQualifiedTypeName name="java.awt.GridBagConstraints"/>
+    <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.supplier.ImageWatermarkSupplier"/>
+    <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
 </qualifiedTypeNameHistroy>

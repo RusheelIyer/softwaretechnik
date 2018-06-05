@@ -15,6 +15,9 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
+import org.iMage.shutterpile.impl.filters.WatermarkFilter;
+import org.iMage.shutterpile.impl.supplier.ImageWatermarkSupplier;
+
 /**
  * Image Action Listener
  * @author rusheeliyer
@@ -59,6 +62,17 @@ public class ImageListener implements ActionListener {
 				
 				button.setIcon(new ImageIcon(ImageIO.read(fc.getSelectedFile()).getScaledInstance(
 						button.getWidth(), button.getHeight(), Image.SCALE_SMOOTH)));
+				
+				if (button == window.getWatermark()) {
+					window.setWatermarkPic(ImageIO.read(fc.getSelectedFile()));
+				} else {
+					window.setInput(ImageIO.read(fc.getSelectedFile()));
+				}
+				
+				ImageWatermarkSupplier supplier = new ImageWatermarkSupplier(window.getWatermarkPic());
+				BufferedImage watermark = supplier.getWatermark();
+				WatermarkFilter filter = new WatermarkFilter(watermark, window.getWatermarksPerRow());
+				window.setOutput(filter.apply(window.getInput()));
 				
 			} catch (IOException e1) {
 				e1.printStackTrace();
