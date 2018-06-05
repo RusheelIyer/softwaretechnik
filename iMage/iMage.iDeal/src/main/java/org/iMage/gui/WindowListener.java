@@ -3,6 +3,7 @@ package org.iMage.gui;
 import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -11,6 +12,8 @@ import javax.swing.JButton;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
+
+import org.iMage.shutterpile.impl.supplier.ImageWatermarkSupplier;
 
 /**
  * Image Action Listener
@@ -35,6 +38,10 @@ public class WindowListener implements ActionListener {
 		if (e.getSource() == window.getOriginal() || e.getSource() == window.getWatermark()) {
 			
 			setNewImage((JButton) e.getSource());
+			
+		} else if (e.getSource() == window.getInitButton()) {
+			
+			changeWatermark(window.getWatermarkPic());
 			
 		}
 		
@@ -70,6 +77,17 @@ public class WindowListener implements ActionListener {
 						"Image File Error", JOptionPane.ERROR_MESSAGE);
 			}
 		}
+		
+	}
+	
+	/**
+	 * get the new watermark from the selected image
+	 * @param watermarkPic the selected image
+	 */
+	public void changeWatermark(BufferedImage watermarkPic) {
+		
+		ImageWatermarkSupplier supplier = new ImageWatermarkSupplier(watermarkPic);
+		window.setWatermarkPic(supplier.getWatermark());
 		
 	}
 	

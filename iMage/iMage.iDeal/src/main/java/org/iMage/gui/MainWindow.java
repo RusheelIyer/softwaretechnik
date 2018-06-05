@@ -45,7 +45,7 @@ public class MainWindow extends JFrame {
 	private JButton original;
 	private JButton watermark; 
 	private JLabel output;
-	private JButton init;
+	private JButton initButton;
 	private JFormattedTextField watermarkRow;
 	private JSlider threshold;
 	private JCheckBox grayscale;
@@ -137,6 +137,14 @@ public class MainWindow extends JFrame {
 	}
 	
 	/**
+	 * get init button
+	 * @return initButton
+	 */
+	public JButton getInitButton() {
+		return this.initButton;
+	}
+	
+	/**
 	 * get the grayscale checkbox
 	 * @return grayscale checkbox
 	 */
@@ -204,7 +212,7 @@ public class MainWindow extends JFrame {
 		JPanel picturePanel = new JPanel();
 		picturePanel.setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
-		init = new JButton("Init");
+		WindowListener listen = new WindowListener(this);
 		
 		gbc.gridx = 0;
 		gbc.gridy = 0;
@@ -235,16 +243,17 @@ public class MainWindow extends JFrame {
 		gbc.gridheight = 1;
 		picturePanel.add(watermark, gbc);
 		
+		initButton = new JButton("Init");
+		initButton.addActionListener(listen);
 		gbc.gridx = 1;
 		gbc.gridy = 2;
-		picturePanel.add(init, gbc);
+		picturePanel.add(initButton, gbc);
 		
 		gbc.gridx = 2;
 		gbc.gridy = 1;
 		gbc.gridheight = 2;
 		picturePanel.add(output, gbc);
 		
-		WindowListener listen = new WindowListener(this);
 		original.addActionListener(listen);
 		watermark.addActionListener(listen);
 		add(picturePanel);
@@ -346,7 +355,6 @@ public class MainWindow extends JFrame {
 		
 		saveButton = new JButton("Save");
 		buttonPanel.add(saveButton);
-		
 		
 		add(buttonPanel);
 		
