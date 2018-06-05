@@ -2,21 +2,29 @@ package org.iMage.gui;
 
 import java.awt.Color;
 import java.awt.EventQueue;
+import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Image;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.text.NumberFormat;
 
 import javax.imageio.ImageIO;
 import javax.swing.BoxLayout;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JFormattedTextField;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
+import javax.swing.JSlider;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 
 /**
  * main window for the GUI
@@ -28,16 +36,19 @@ public class MainWindow extends JFrame {
 	
 	JFrame frame;
 	
-	private int watermarksPerRow = 30;
+	private int watermarksPerRow = 1;
+	private Font textFont = new Font("Custom1", Font.PLAIN, 18);
 	private BufferedImage input;
 	private BufferedImage watermarkPic;
 	private BufferedImage outputPic;
 	
-	private JTextField watermarkRow;
 	private JButton original;
 	private JButton watermark; 
 	private JLabel output;
 	private JButton init;
+	private JFormattedTextField watermarkRow;
+	private JSlider threshold;
+	private JCheckBox grayscale;
 	
 	/**
 	 * get watermarks per row
@@ -124,6 +135,14 @@ public class MainWindow extends JFrame {
 	}
 	
 	/**
+	 * get the grayscale checkbox
+	 * @return grayscale checkbox
+	 */
+	public JCheckBox getGrayscale() {
+		return this.grayscale;
+	}
+	
+	/**
 	 * operation on the main window frame
 	 */
 	MainWindow() {
@@ -131,7 +150,7 @@ public class MainWindow extends JFrame {
 		setTitle("iDeal");
 		setSize(700, 500);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
-		setLayout(new GridBagLayout());
+		setLayout(new BoxLayout(this.getContentPane(), BoxLayout.Y_AXIS));
 		GridBagConstraints gbc = new GridBagConstraints();
 		setResizable(false);
 		setVisible(true);
@@ -155,7 +174,7 @@ public class MainWindow extends JFrame {
 		}
 		
 		showPicturePanel();
-		//showImageAdjusters();
+		showConfig();
 		
 	}
 	
@@ -164,71 +183,140 @@ public class MainWindow extends JFrame {
 	 */
 	public void showPicturePanel() {
 		
+		JPanel picturePanel = new JPanel();
+		picturePanel.setLayout(new GridBagLayout());
 		GridBagConstraints gbc = new GridBagConstraints();
 		init = new JButton("Init");
 		
 		gbc.gridx = 0;
 		gbc.gridy = 0;
+		gbc.weightx = 1;
 		JLabel originalLabel = new JLabel("Original");
-		add(originalLabel, gbc);
+		originalLabel.setFont(textFont);
+		picturePanel.add(originalLabel, gbc);
 		
 		gbc.gridx = 1;
 		gbc.gridy = 0;
 		JLabel watermarkLabel = new JLabel("Watermark");
-		add(watermarkLabel, gbc);
+		watermarkLabel.setFont(textFont);
+		picturePanel.add(watermarkLabel, gbc);
 		
 		gbc.gridx = 2;
 		gbc.gridy = 0;
 		JLabel watermarkedLabel = new JLabel("Watermarked");
-		add(watermarkedLabel, gbc);
+		watermarkedLabel.setFont(textFont);
+		picturePanel.add(watermarkedLabel, gbc);
 		
 		gbc.gridx = 0;
 		gbc.gridy = 1;
 		gbc.gridheight = 2;
-		add(original, gbc);
+		picturePanel.add(original, gbc);
 		
 		gbc.gridx = 1;
 		gbc.gridy = 1;
 		gbc.gridheight = 1;
-		add(watermark, gbc);
+		picturePanel.add(watermark, gbc);
 		
 		gbc.gridx = 1;
 		gbc.gridy = 2;
-		add(init, gbc);
+		picturePanel.add(init, gbc);
 		
 		gbc.gridx = 2;
 		gbc.gridy = 1;
 		gbc.gridheight = 2;
-		add(output, gbc);
+		picturePanel.add(output, gbc);
 		
 		WindowListener listen = new WindowListener(this);
 		original.addActionListener(listen);
 		watermark.addActionListener(listen);
+		picturePanel.setVisible(true);
+		getContentPane().add(picturePanel);
 		
 	}
 	
 	/**
 	 * display options to adjust the output images
 	 */
-	public void showImageAdjusters() {
+	public void showConfig() {
 		
 		JPanel adjustPanel = new JPanel();
-		watermarkRow = new JTextField("1");
-		watermarkRow.setSize(100, JTextField.HEIGHT);
+		adjustPanel.setLayout(new GridBagLayout());
+		GridBagConstraints gbc = new GridBagConstraints();
+		gbc.weightx = 1;
+		gbc.weighty = 1;
+		
+		JLabel textLabel = new JLabel("WM per Row");
+		textLabel.setFont(textFont);
+		gbc.gridx = 0;
+		gbc.gridy = 0;
+		adjustPanel.add(textLabel, gbc);
+		
+		watermarkRow = new JFormattedTextField(NumberFormat.getIntegerInstance());
+		watermarkRow.addFocusListener(new FocusListener() {
+
+			@Override
+			public void focusGained(FocusEvent e) {
+				watermarkRow.setForeground(Color.BLACK);
+			}
+
+			@Override
+			public void focusLost(FocusEvent e) {
+				try {
+					Integer.parseInt(watermarkRow.getText());
+				} catch (NumberFormatException exc) {
+					watermarkRow.setFocusLostBehavior(JFormattedTextField.PERSIST);
+					watermarkRow.setForeground(Color.RED);
+				}
+			}
+			
+		});
 		watermarkRow.setEditable(true);
+		watermarkRow.setColumns(5);
+		gbc.gridx = 1;
+		gbc.gridy = 0;
+		adjustPanel.add(watermarkRow, gbc);
 		
-		try {
-			watermarksPerRow = Integer.parseInt(watermarkRow.getText());
-		} catch (NumberFormatException e) {
-			watermarkRow.setForeground(Color.RED);
-		}
+		JLabel thresholdLabel = new JLabel("Threshold (0)");
+		thresholdLabel.setFont(textFont);
+		gbc.gridx = 0;
+		gbc.gridy = 1;
+		adjustPanel.add(thresholdLabel, gbc);
 		
-		adjustPanel.add(watermarkRow);
+		threshold = new JSlider(0, 255);
+		threshold.setMajorTickSpacing(255);
+		threshold.setPaintTicks(true);
+		threshold.setPaintLabels(true);
+		threshold.addChangeListener(new ChangeListener() {
+
+			@Override
+			public void stateChanged(ChangeEvent e) {
+				
+				if (!threshold.getValueIsAdjusting()) {
+					thresholdLabel.setText("Threshold (" + threshold.getValue() + ")");
+				}
+				
+			}
+			
+		});
+		gbc.gridx = 1;
+		gbc.gridy = 1;
+		adjustPanel.add(threshold, gbc);
+		
+		JLabel grayscaleLabel = new JLabel("Grayscale");
+		grayscaleLabel.setFont(textFont);
+		gbc.gridx = 0;
+		gbc.gridy = 2;
+		adjustPanel.add(grayscaleLabel, gbc);
+		
+		grayscale = new JCheckBox();
+		gbc.gridx = 1;
+		gbc.gridy = 2;
+		adjustPanel.add(grayscale, gbc);
+		
 		adjustPanel.setVisible(true);
 		getContentPane().add(adjustPanel);
 		
 	}
-	
 	
 	
 	/**
