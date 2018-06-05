@@ -15,6 +15,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 /**
  * main window for the GUI
@@ -30,22 +31,11 @@ public class MainWindow extends JFrame {
 	private BufferedImage input;
 	private BufferedImage watermarkPic;
 	private BufferedImage outputPic;
-	/**
-	 * button with input preview
-	 */
-	private JButton original;
-	/**
-	 * button with watermark preview
-	 */
-	private JButton watermark; 
-	/**
-	 * label with watermarked image preview
-	 */
-	private JLabel output;
 	
-	/**
-	 * init buttons
-	 */
+	private JTextField watermarkRow;
+	private JButton original;
+	private JButton watermark; 
+	private JLabel output;
 	private JButton init;
 	
 	/**
@@ -161,6 +151,7 @@ public class MainWindow extends JFrame {
 		}
 		
 		showPicturePanel();
+		showImageAdjusters();
 		
 	}
 	
@@ -197,7 +188,16 @@ public class MainWindow extends JFrame {
 		ImageListener listen = new ImageListener(this);
 		original.addActionListener(listen);
 		watermark.addActionListener(listen);
-		getContentPane().add(picturePanel);
+		getContentPane().add(picturePanel);	
+	}
+	
+	/**
+	 * display options to adjust the output images
+	 */
+	public void showImageAdjusters() {
+		
+		JPanel adjustPanel = new JPanel();
+		
 		
 	}
 	

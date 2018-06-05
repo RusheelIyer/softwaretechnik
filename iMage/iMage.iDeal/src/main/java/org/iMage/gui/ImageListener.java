@@ -68,12 +68,7 @@ public class ImageListener implements ActionListener {
 				} else {
 					window.setInput(ImageIO.read(fc.getSelectedFile()));
 				}
-				
-				ImageWatermarkSupplier supplier = new ImageWatermarkSupplier(window.getWatermarkPic());
-				BufferedImage watermark = supplier.getWatermark();
-				WatermarkFilter filter = new WatermarkFilter(watermark, window.getWatermarksPerRow());
-				window.setOutput(filter.apply(window.getInput()));
-				
+								
 			} catch (IOException e1) {
 				e1.printStackTrace();
 			}  catch (NullPointerException nullPointer) {
