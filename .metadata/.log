@@ -2676,3 +2676,37 @@ Caused by: /Users/rusheeliyer/softwaretechnik/iMage/iMage.iDeal/src/main/java/or
 	at com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer.compilationUnit(GeneratedJavaRecognizer.java:211)
 	at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:94)
 	... 20 more
+
+!ENTRY net.sf.eclipsecs.core 4 0 2018-06-06 19:02:21.999
+!MESSAGE Checkstyle-Plugin: Exception was thrown while processing /Users/rusheeliyer/softwaretechnik/iMage/iMage.iDeal/src/main/java/org/iMage/gui/WindowListener.java
+!STACK 0
+com.puppycrawl.tools.checkstyle.api.CheckstyleException: Exception was thrown while processing /Users/rusheeliyer/softwaretechnik/iMage/iMage.iDeal/src/main/java/org/iMage/gui/WindowListener.java
+	at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:299)
+	at com.puppycrawl.tools.checkstyle.Checker.process(Checker.java:217)
+	at net.sf.eclipsecs.core.builder.Auditor.runAudit(Auditor.java:158)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.handleBuildSelection(CheckstyleBuilder.java:306)
+	at net.sf.eclipsecs.core.builder.CheckstyleBuilder.build(CheckstyleBuilder.java:172)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:735)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:206)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:246)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:301)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:304)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:360)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:383)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:142)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:232)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+Caused by: com.puppycrawl.tools.checkstyle.api.CheckstyleException: MismatchedTokenException occurred while parsing file /Users/rusheeliyer/softwaretechnik/iMage/iMage.iDeal/src/main/java/org/iMage/gui/WindowListener.java.
+	at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:100)
+	at com.puppycrawl.tools.checkstyle.TreeWalker.processFiltered(TreeWalker.java:181)
+	at com.puppycrawl.tools.checkstyle.api.AbstractFileSetCheck.process(AbstractFileSetCheck.java:83)
+	at com.puppycrawl.tools.checkstyle.Checker.processFile(Checker.java:320)
+	at com.puppycrawl.tools.checkstyle.Checker.processFiles(Checker.java:290)
+	... 16 more
+Caused by: /Users/rusheeliyer/softwaretechnik/iMage/iMage.iDeal/src/main/java/org/iMage/gui/WindowListener.java:70:3: expecting EOF, found 'int'
+	at antlr.Parser.match(Parser.java:211)
+	at com.puppycrawl.tools.checkstyle.grammars.GeneratedJavaRecognizer.compilationUnit(GeneratedJavaRecognizer.java:211)
+	at com.puppycrawl.tools.checkstyle.JavaParser.parse(JavaParser.java:94)
+	... 20 more

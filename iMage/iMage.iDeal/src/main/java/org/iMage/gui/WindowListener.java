@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.nio.file.Files;
 
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
@@ -50,6 +51,8 @@ public class WindowListener implements ActionListener {
 			runWatermarking();
 		} else if (e.getSource() == window.getOutput()) {
 			openWatermarked();
+		} else if (e.getSource() == window.getSaveButton()) {
+			save();
 		} else if (e.getSource() == window.getGrayscale()) {
 			waitForInit();
 		}
@@ -64,27 +67,30 @@ public class WindowListener implements ActionListener {
 		
 		JFileChooser fc = new JFileChooser();
 		fc.setFileSelectionMode(JFileChooser.FILES_ONLY);
-		fc.addChoosableFileFilter(new FileNameExtensionFilter("Image Files", ImageIO.getReaderFileSuffixes()));
+		FileNameExtensionFilter filter = new FileNameExtensionFilter("PNG Files", "png");
+		fc.addChoosableFileFilter(filter);
 		int returnVal = fc.showOpenDialog(button);
 		
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
 			try {
 				
-				button.setIcon(new ImageIcon(ImageIO.read(fc.getSelectedFile()).getScaledInstance(
-						button.getWidth(), button.getHeight(), Image.SCALE_SMOOTH)));
-				
-				if (button == window.getWatermark()) {
-					window.setWatermarkPic(ImageIO.read(fc.getSelectedFile()));
+				if (fc.getSelectedFile().getAbsolutePath().endsWith("png")) {
+					button.setIcon(new ImageIcon(ImageIO.read(fc.getSelectedFile()).getScaledInstance(
+							button.getWidth(), button.getHeight(), Image.SCALE_SMOOTH)));
+					
+					if (button == window.getWatermark()) {
+						window.setWatermarkPic(ImageIO.read(fc.getSelectedFile()));
+					} else {
+						window.setInput(ImageIO.read(fc.getSelectedFile()));
+						window.setInputFileName(fc.getSelectedFile().getName());
+					}
 				} else {
-					window.setInput(ImageIO.read(fc.getSelectedFile()));
-					window.setInputFileName(fc.getSelectedFile().getName());
+					JOptionPane.showMessageDialog(window, "Please choose a valid PNG file", 
+							"File Error", JOptionPane.ERROR_MESSAGE);
 				}
 								
 			} catch (IOException e1) {
 				e1.printStackTrace();
-			}  catch (NullPointerException nullPointer) {
-				JOptionPane.showMessageDialog(window, "Please choose a valid image file", 
-						"Image File Error", JOptionPane.ERROR_MESSAGE);
 			}
 		}
 		
@@ -155,6 +161,29 @@ public class WindowListener implements ActionListener {
 		scrollPic.setVisible(true);
 		display.add(scrollPic, BorderLayout.CENTER);
 		display.setVisible(true);
+	}
+	
+	/**
+	 * save the watermarked image
+	 */
+	public void save() {
+		JFileChooser fc = new JFileChooser();
+		fc.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
+		int returnVal = fc.showSaveDialog(window);
+		
+		if (returnVal == JFileChooser.APPROVE_OPTION) {
+			if (fc.getSelectedFile().getAbsolutePath().endsWith("png")) {
+				try {
+					ImageIO.write(window.getOutputPic(), "png", fc.getSelectedFile());
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			} else {
+				JOptionPane.showMessageDialog(window, "Please save as PNG file", 
+						"File Error", JOptionPane.ERROR_MESSAGE);
+			}
+		}
+		
 	}
 	
 	/**

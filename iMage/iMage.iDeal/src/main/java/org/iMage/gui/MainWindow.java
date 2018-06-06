@@ -393,6 +393,7 @@ public class MainWindow extends JFrame {
 		buttonPanel.add(runButton);
 		
 		saveButton = new JButton("Save");
+		saveButton.addActionListener(listen);
 		buttonPanel.add(saveButton);
 		
 		add(buttonPanel);

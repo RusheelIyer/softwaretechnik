@@ -28,6 +28,7 @@ public final class ImageWatermarkSupplier implements IWatermarkSupplier {
 
   private final BufferedImage watermarkInput;
   private final boolean useGrayscaleFilter;
+  private int thresholdValue;
 
   private BufferedImage createdWatermark;
 
@@ -54,10 +55,8 @@ public final class ImageWatermarkSupplier implements IWatermarkSupplier {
    */
   public ImageWatermarkSupplier(BufferedImage watermarkInput, boolean useGrayscaleFilter, int threshold) {
 	  
-	  ThresholdFilter tFilter = new ThresholdFilter();
-	  BufferedImage thresholdWatermark = tFilter.apply(watermarkInput, threshold);
-	  this.watermarkInput = thresholdWatermark;
-	  this.useGrayscaleFilter = useGrayscaleFilter;
+	  this(watermarkInput, true);
+	  this.thresholdValue = threshold;
 	  
   }
 
@@ -84,7 +83,11 @@ public final class ImageWatermarkSupplier implements IWatermarkSupplier {
         watermark = this.gsf.apply(watermark);
       }
       // Apply ThresholdFilter
-      watermark = this.thf.apply(watermark);
+      if (this.thresholdValue == 0) {
+    	  watermark = new ThresholdFilter().apply(watermark, this.thresholdValue);  
+      } else {
+    	  watermark = this.thf.apply(watermark);
+      }
       // Set alpha value / create ARGB as we guarantee an ARBG-Image
       watermark = ImageUtils.createARGBImage(watermark);
       this.applyAlpha(watermark);
