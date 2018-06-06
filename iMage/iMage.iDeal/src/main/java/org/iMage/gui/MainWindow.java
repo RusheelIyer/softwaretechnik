@@ -270,6 +270,7 @@ public class MainWindow extends JFrame {
 		
 		initButton = new JButton("Init");
 		initButton.addActionListener(listen);
+		initButton.setToolTipText("Update the watermark");
 		gbc.gridx = 1;
 		gbc.gridy = 2;
 		picturePanel.add(initButton, gbc);
@@ -280,8 +281,11 @@ public class MainWindow extends JFrame {
 		picturePanel.add(output, gbc);
 		
 		original.addActionListener(listen);
+		original.setToolTipText("The base image");
 		watermark.addActionListener(listen);
+		watermark.setToolTipText("The watermark to be applied on the base image");
 		output.addActionListener(listen);
+		output.setToolTipText("The watermarked image");
 		add(picturePanel);
 		
 	}
@@ -390,10 +394,12 @@ public class MainWindow extends JFrame {
 		
 		runButton = new JButton("Run");
 		runButton.addActionListener(listen);
+		runButton.setToolTipText("Create the watermarked image");
 		buttonPanel.add(runButton);
 		
 		saveButton = new JButton("Save");
 		saveButton.addActionListener(listen);
+		saveButton.setToolTipText("Save the watermarked image");
 		buttonPanel.add(saveButton);
 		
 		add(buttonPanel);
