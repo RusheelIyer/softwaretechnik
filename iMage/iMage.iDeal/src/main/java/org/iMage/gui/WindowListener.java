@@ -1,6 +1,9 @@
 package org.iMage.gui;
 
+import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.Image;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
@@ -13,6 +16,7 @@ import javax.swing.JDialog;
 import javax.swing.JFileChooser;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 import org.iMage.shutterpile.impl.filters.WatermarkFilter;
@@ -117,13 +121,24 @@ public class WindowListener implements ActionListener {
 		JDialog display = new JDialog();
 		display.setResizable(false);
 		display.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+		
 		BufferedImage outputPic = window.getOutputPic();
-		display.setSize(outputPic.getWidth(), outputPic.getHeight());
-		String grayscale = window.getGrayscale().isSelected() ? ", grayscale" : "";
+		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+		
+		if (outputPic.getWidth() >= screenSize.getWidth() || outputPic.getHeight() >= screenSize.getHeight()) {
+			display.setSize(700, 500);
+		} else {
+			display.setSize(outputPic.getWidth(), outputPic.getWidth());
+		}
+		
+		String grayscale = window.getGrayscale().isSelected() ? ", grayscale)" : ")";
 		display.setTitle(window.getInputFileName() + "(threshold " + window.getThresholdValue() + ", WM pr "
 		+ window.getWatermarksPerRow() + grayscale);
+		JScrollPane scrollPic = new JScrollPane();
 		JLabel picContainer = new JLabel(new ImageIcon((Image) outputPic));
-		display.add(picContainer);
+		scrollPic.setViewportView(picContainer);
+		scrollPic.setVisible(true);
+		display.add(scrollPic, BorderLayout.CENTER);
 		display.setVisible(true);
 	}
 	
