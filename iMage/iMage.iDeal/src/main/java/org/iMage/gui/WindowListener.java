@@ -75,14 +75,31 @@ public class WindowListener implements ActionListener {
 			try {
 				
 				if (fc.getSelectedFile().getAbsolutePath().endsWith("png")) {
-					button.setIcon(new ImageIcon(ImageIO.read(fc.getSelectedFile()).getScaledInstance(
-							button.getWidth(), button.getHeight(), Image.SCALE_SMOOTH)));
 					
 					if (button == window.getWatermark()) {
 						window.setWatermarkPic(ImageIO.read(fc.getSelectedFile()));
 					} else {
-						window.setInput(ImageIO.read(fc.getSelectedFile()));
-						window.setInputFileName(fc.getSelectedFile().getName());
+						BufferedImage newInput = ImageIO.read(fc.getSelectedFile());
+						String[] options = {"Yes", "No"};
+						if (newInput.getWidth() > 1280 || newInput.getHeight() > 1024) {
+							int option = JOptionPane.showConfirmDialog(window, "Do you wish to reduce the image size?",
+									"Reduce Image Size", JOptionPane.YES_NO_OPTION);
+							if (option == JOptionPane.YES_OPTION) {
+								while (newInput.getWidth() <= 1280 && newInput.getHeight() <= 1024) {
+									newInput = (BufferedImage) newInput.getScaledInstance(newInput.getWidth() / 2,
+											newInput.getHeight() / 2, Image.SCALE_SMOOTH);
+								}
+								button.setIcon(new ImageIcon(ImageIO.read(fc.getSelectedFile()).getScaledInstance(
+										button.getWidth(), button.getHeight(), Image.SCALE_SMOOTH)));
+							} else {
+								fc.setVisible(false);
+							}
+						} else {
+							button.setIcon(new ImageIcon(ImageIO.read(fc.getSelectedFile()).getScaledInstance(
+									button.getWidth(), button.getHeight(), Image.SCALE_SMOOTH)));
+							window.setInput(newInput);
+							window.setInputFileName(fc.getSelectedFile().getName());
+						}
 					}
 				} else {
 					JOptionPane.showMessageDialog(window, "Please choose a valid PNG file", 
