@@ -338,6 +338,7 @@ public class MainWindow extends JFrame {
 		adjustPanel.add(thresholdLabel, gbc);
 		
 		threshold = new JSlider(0, 255);
+		threshold.setValue(127);
 		threshold.setMajorTickSpacing(255);
 		threshold.setPaintTicks(true);
 		threshold.setPaintLabels(true);
@@ -346,6 +347,11 @@ public class MainWindow extends JFrame {
 			@Override
 			public void stateChanged(ChangeEvent e) {
 				
+				if (threshold.getValueIsAdjusting()) {
+					runButton.setEnabled(false);
+					saveButton.setEnabled(false);
+				}
+				
 				if (!threshold.getValueIsAdjusting()) {
 					thresholdLabel.setText("Threshold (" + threshold.getValue() + ")");
 				}
@@ -353,6 +359,7 @@ public class MainWindow extends JFrame {
 			}
 			
 		});
+		
 		gbc.gridx = 1;
 		gbc.gridy = 1;
 		adjustPanel.add(threshold, gbc);
@@ -364,6 +371,7 @@ public class MainWindow extends JFrame {
 		adjustPanel.add(grayscaleLabel, gbc);
 		
 		grayscale = new JCheckBox();
+		grayscale.addActionListener(new WindowListener(this));
 		gbc.gridx = 1;
 		gbc.gridy = 2;
 		adjustPanel.add(grayscale, gbc);

@@ -41,7 +41,7 @@ public class WindowListener implements ActionListener {
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+
 		if (e.getSource() == window.getOriginal() || e.getSource() == window.getWatermark()) {
 			setNewImage((JButton) e.getSource());
 		} else if (e.getSource() == window.getInitButton()) {
@@ -50,6 +50,8 @@ public class WindowListener implements ActionListener {
 			runWatermarking();
 		} else if (e.getSource() == window.getOutput()) {
 			openWatermarked();
+		} else if (e.getSource() == window.getGrayscale()) {
+			waitForInit();
 		}
 		
 	}
@@ -93,8 +95,15 @@ public class WindowListener implements ActionListener {
 	 */
 	public void changeWatermark() {
 		
-		ImageWatermarkSupplier supplier = new ImageWatermarkSupplier(window.getWatermarkPic());
+		ImageWatermarkSupplier supplier;
+		if (window.getGrayscale().isSelected()) {
+			supplier = new ImageWatermarkSupplier(window.getWatermarkPic(), true, window.getThresholdValue());
+		} else {
+			supplier = new ImageWatermarkSupplier(window.getWatermarkPic(), false, window.getThresholdValue());
+		}
 		window.setWatermarkPic(supplier.getWatermark());
+		window.getRunButton().setEnabled(true);
+		window.getSaveButton().setEnabled(true);
 		
 	}
 	
@@ -140,6 +149,14 @@ public class WindowListener implements ActionListener {
 		scrollPic.setVisible(true);
 		display.add(scrollPic, BorderLayout.CENTER);
 		display.setVisible(true);
+	}
+	
+	/**
+	 * disable run and save button if threshold and/or grayscale is changed
+	 */
+	public void waitForInit() {
+		window.getRunButton().setEnabled(false);
+		window.getSaveButton().setEnabled(false);
 	}
 	
 }
