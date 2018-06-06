@@ -9,7 +9,9 @@ import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFileChooser;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
@@ -42,6 +44,8 @@ public class WindowListener implements ActionListener {
 			changeWatermark();
 		} else if (e.getSource() == window.getRunButton()) {
 			runWatermarking();
+		} else if (e.getSource() == window.getOutput()) {
+			openWatermarked();
 		}
 		
 	}
@@ -67,6 +71,7 @@ public class WindowListener implements ActionListener {
 					window.setWatermarkPic(ImageIO.read(fc.getSelectedFile()));
 				} else {
 					window.setInput(ImageIO.read(fc.getSelectedFile()));
+					window.setInputFileName(fc.getSelectedFile().getName());
 				}
 								
 			} catch (IOException e1) {
@@ -103,6 +108,23 @@ public class WindowListener implements ActionListener {
 			WatermarkFilter filter = new WatermarkFilter(window.getWatermarkPic(), watermarksPerRow);
 			window.setOutput(filter.apply(window.getInput()));
 		}
+	}
+	
+	/**
+	 * open the dialog with the watermarked picture in full size
+	 */
+	public void openWatermarked() {
+		JDialog display = new JDialog();
+		display.setResizable(false);
+		display.setDefaultCloseOperation(JDialog.DISPOSE_ON_CLOSE);
+		BufferedImage outputPic = window.getOutputPic();
+		display.setSize(outputPic.getWidth(), outputPic.getHeight());
+		String grayscale = window.getGrayscale().isSelected() ? ", grayscale" : "";
+		display.setTitle(window.getInputFileName() + "(threshold " + window.getThresholdValue() + ", WM pr "
+		+ window.getWatermarksPerRow() + grayscale);
+		JLabel picContainer = new JLabel(new ImageIcon((Image) outputPic));
+		display.add(picContainer);
+		display.setVisible(true);
 	}
 	
 }

@@ -36,9 +36,10 @@ public class MainWindow extends JFrame {
 	
 	JFrame frame;
 	
-	private int watermarksPerRow = 1;
+	private int watermarksPerRow;
 	private Font textFont = new Font("Custom1", Font.PLAIN, 18);
 	private BufferedImage input;
+	private String inputFileName;
 	private BufferedImage watermarkPic;
 	private BufferedImage outputPic;
 	
@@ -94,6 +95,22 @@ public class MainWindow extends JFrame {
 	}
 	
 	/**
+	 * get the input pic file name
+	 * @return inputFileName
+	 */
+	public String getInputFileName() {
+		return this.inputFileName;
+	}
+	
+	/**
+	 * set the input file name when new picture is chosen
+	 * @param name the new file name
+	 */
+	public void setInputFileName(String name) {
+		this.inputFileName = name;
+	}
+	
+	/**
 	 * get the watermark picture
 	 * @return the watermark picture
 	 */
@@ -142,6 +159,14 @@ public class MainWindow extends JFrame {
 	 */
 	public JButton getInitButton() {
 		return this.initButton;
+	}
+	
+	/**
+	 * get the current value on the slider
+	 * @return the value on the slider
+	 */
+	public int getThresholdValue() {
+		return this.threshold.getValue();
 	}
 	
 	/**
@@ -256,6 +281,7 @@ public class MainWindow extends JFrame {
 		
 		original.addActionListener(listen);
 		watermark.addActionListener(listen);
+		output.addActionListener(listen);
 		add(picturePanel);
 		
 	}
