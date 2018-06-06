@@ -95,15 +95,21 @@ public class WindowListener implements ActionListener {
 	 */
 	public void changeWatermark() {
 		
-		ImageWatermarkSupplier supplier;
-		if (window.getGrayscale().isSelected()) {
-			supplier = new ImageWatermarkSupplier(window.getWatermarkPic(), true, window.getThresholdValue());
-		} else {
-			supplier = new ImageWatermarkSupplier(window.getWatermarkPic(), false, window.getThresholdValue());
+		try {
+			window.getWatermarksPerRow();
+			window.getRunButton().setEnabled(true);
+			window.getSaveButton().setEnabled(true);
+			ImageWatermarkSupplier supplier;
+			if (window.getGrayscale().isSelected()) {
+				supplier = new ImageWatermarkSupplier(window.getWatermarkPic(), true, window.getThresholdValue());
+			} else {
+				supplier = new ImageWatermarkSupplier(window.getWatermarkPic(), false, window.getThresholdValue());
+			}
+			window.setWatermarkPic(supplier.getWatermark());
+		} catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(window, "Invalid watermarks per row input",
+					"Input Error", JOptionPane.ERROR_MESSAGE);
 		}
-		window.setWatermarkPic(supplier.getWatermark());
-		window.getRunButton().setEnabled(true);
-		window.getSaveButton().setEnabled(true);
 		
 	}
 	

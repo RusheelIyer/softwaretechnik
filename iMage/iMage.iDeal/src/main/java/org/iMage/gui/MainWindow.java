@@ -338,7 +338,7 @@ public class MainWindow extends JFrame {
 		adjustPanel.add(thresholdLabel, gbc);
 		
 		threshold = new JSlider(0, 255);
-		threshold.setValue(127);
+		threshold.setValue(0);
 		threshold.setMajorTickSpacing(255);
 		threshold.setPaintTicks(true);
 		threshold.setPaintLabels(true);
