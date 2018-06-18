@@ -1,4 +1,136 @@
 <changelog><commit>
+					<time>1528307662</time>
+					<sha1>c4b1719345a8d948f5560f85afeb53397981b017</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>display information when mouse hovers over the button</msg>
+				</commit><commit>
+					<time>1528307395</time>
+					<sha1>5e0e80b81a5ccbebd134e668f77c19614ab3605d</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>implemented reduce image size option</msg>
+				</commit><commit>
+					<time>1528306227</time>
+					<sha1>0e37a2b9e2110230618bc413d1e36314aa03ba6b</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>implemented save button</msg>
+				</commit><commit>
+					<time>1528304108</time>
+					<sha1>52bd15e43f01d0a9dbd2a6a892966a0838042fac</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>enable run and save buttons only when init is clicked with valid watermarks per row input implemented</msg>
+				</commit><commit>
+					<time>1528303436</time>
+					<sha1>daa6b672c5d61873f1f1efa5d5909a0bf6f50a36</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>disable run and save button when grayscale or threshold values changed</msg>
+				</commit><commit>
+					<time>1528302163</time>
+					<sha1>861a0082a7c47e734b1f6eedbdf036cc8078a326</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>added scroll pane to the output dialog in case picture too big</msg>
+				</commit><commit>
+					<time>1528301253</time>
+					<sha1>0d992292af979bccc18f530ac74c5a208c1cc3c5</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>opens full sized watermarked image when clicked</msg>
+				</commit><commit>
+					<time>1528220431</time>
+					<sha1>8826be69db538d5b771f1e5f9b0c8815c1d3a4b5</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>implemented run button</msg>
+				</commit><commit>
+					<time>1528218970</time>
+					<sha1>ff104ed71b64257d4b150d1bc58646ecb96dc190</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>implemented the init button</msg>
+				</commit><commit>
+					<time>1528218501</time>
+					<sha1>ba69ae4732b8f20ae119daafdd3615482a134fd3</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>created button pane</msg>
+				</commit><commit>
+					<time>1528217942</time>
+					<sha1>b00305a3f7654c70890534fda445f8900a93d75b</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>created config pane</msg>
+				</commit><commit>
+					<time>1528209354</time>
+					<sha1>6ab2d40d0d65033f8f0a49727403d19f8fdf9ef1</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>changed main window frame layout</msg>
+				</commit><commit>
+					<time>1528207656</time>
+					<sha1>3f6ba724ff51f320fe519cf79b37dc5683efd171</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>reverted changes (output pic is not meant to be updated as soon as input and watermarks are chosen)</msg>
+				</commit><commit>
+					<time>1528207141</time>
+					<sha1>8af4945ae5255047e08563e207364ebc6693673d</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>updated git ignroe file</msg>
+				</commit><commit>
+					<time>1528207077</time>
+					<sha1>7dc1fa6b4c0ce7d7dede446c39a137e952bb9e49</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>update output picture, when input picture file or watermark picture file chosen</msg>
+				</commit><commit>
+					<time>1528134039</time>
+					<sha1>b3b4b3bc3cb34959c6339886606cd0d0f3df3920</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>added init button and fixed image panel layout</msg>
+				</commit><commit>
+					<time>1528132004</time>
+					<sha1>bb42e54f23b1cd29758e9bdb8b429becbf3153a0</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>fixed checkstyle errors and implemented image listeners to choose new images</msg>
+				</commit><commit>
+					<time>1528110455</time>
+					<sha1>43593dfc04ec02c074a61a53829b6a0a95d4ebf7</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>created image listener to choose image file</msg>
+				</commit><commit>
+					<time>1528108973</time>
+					<sha1>9ba27073cf733b287eafb0abbe39bee50136abd2</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>changed the labels with images to buttons</msg>
+				</commit><commit>
+					<time>1528047637</time>
+					<sha1>1e9495491e633efc86929f06739e150bd88a6236</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>created image viewing pane</msg>
+				</commit><commit>
+					<time>1528046792</time>
+					<sha1>a4c37f6cbb5fb1263b464e85ed8195ce83d3b59f</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>created the main window frame</msg>
+				</commit><commit>
+					<time>1527920426</time>
+					<sha1>130eb030f9fcc69ba1ec8800e52637a730d1ad72</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>added threconstructor with threshold value for WatermarkSupplier</msg>
+				</commit><commit>
 					<time>1526813537</time>
 					<sha1>e5249e3ec22ea57cdda923e0dc20d8115cd35fa2</sha1>
 					<author>Rusheel</author>

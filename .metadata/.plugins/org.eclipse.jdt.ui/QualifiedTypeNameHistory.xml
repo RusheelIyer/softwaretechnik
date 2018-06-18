@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.io.IOException"/>
-    <fullyQualifiedTypeName name="org.jis.options.Options"/>
-    <fullyQualifiedTypeName name="java.nio.file.StandardCopyOption"/>
-    <fullyQualifiedTypeName name="org.junit.Ignore"/>
     <fullyQualifiedTypeName name="org.iMage.shutterpile.port.IFilter"/>
     <fullyQualifiedTypeName name="com.sun.prism.Graphics"/>
     <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.GrayscaleFilter"/>
@@ -18,7 +14,6 @@
     <fullyQualifiedTypeName name="org.iMage.plugins.JmjrstPlugin"/>
     <fullyQualifiedTypeName name="org.iMage.plugins.PluginManager"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
-    <fullyQualifiedTypeName name="java.nio.file.Files"/>
     <fullyQualifiedTypeName name="org.kohsuke.MetaInfServices"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="java.awt.Frame"/>
@@ -26,7 +21,6 @@
     <fullyQualifiedTypeName name="javax.swing.JPanel"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.awt.EventQueue"/>
-    <fullyQualifiedTypeName name="java.awt.Dimension"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
     <fullyQualifiedTypeName name="javax.swing.JFileChooser"/>
     <fullyQualifiedTypeName name="java.awt.Component"/>
@@ -39,10 +33,8 @@
     <fullyQualifiedTypeName name="java.awt.GridBagConstraints"/>
     <fullyQualifiedTypeName name="java.awt.Image"/>
     <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
-    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="java.awt.GridLayout"/>
     <fullyQualifiedTypeName name="java.awt.Font"/>
-    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
     <fullyQualifiedTypeName name="javax.swing.BoxLayout"/>
     <fullyQualifiedTypeName name="java.text.NumberFormat"/>
     <fullyQualifiedTypeName name="javax.swing.JTextArea"/>
@@ -57,7 +49,15 @@
     <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
     <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.supplier.ImageWatermarkSupplier"/>
     <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.WatermarkFilter"/>
+    <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="javax.swing.JDialog"/>
     <fullyQualifiedTypeName name="javax.swing.JLabel"/>
-    <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
+    <fullyQualifiedTypeName name="java.awt.Toolkit"/>
+    <fullyQualifiedTypeName name="javax.swing.JScrollPane"/>
+    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+    <fullyQualifiedTypeName name="java.io.FileFilter"/>
+    <fullyQualifiedTypeName name="java.nio.file.Files"/>
+    <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
+    <fullyQualifiedTypeName name="org.junit.Ignore"/>
 </qualifiedTypeNameHistroy>
