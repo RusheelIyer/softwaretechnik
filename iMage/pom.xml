@@ -23,6 +23,7 @@
   	<module>iMage.facezine-plugin</module>
   	<module>iMage.bundle</module>
   	<module>iMage.iDeal</module>
+  	<module>iMage.shutterpile-parallel</module>
   </modules>
   <build>
     <plugins>

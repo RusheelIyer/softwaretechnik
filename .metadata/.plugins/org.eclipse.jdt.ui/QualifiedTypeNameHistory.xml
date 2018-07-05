@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.iMage.shutterpile.port.IFilter"/>
-    <fullyQualifiedTypeName name="com.sun.prism.Graphics"/>
-    <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.GrayscaleFilter"/>
-    <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.ThresholdFilter"/>
     <fullyQualifiedTypeName name="java.awt.Graphics2D"/>
     <fullyQualifiedTypeName name="java.awt.AlphaComposite"/>
     <fullyQualifiedTypeName name="java.awt.Graphics"/>
@@ -48,7 +44,6 @@
     <fullyQualifiedTypeName name="javax.swing.event.ChangeListener"/>
     <fullyQualifiedTypeName name="javax.swing.JCheckBox"/>
     <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.supplier.ImageWatermarkSupplier"/>
-    <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.WatermarkFilter"/>
     <fullyQualifiedTypeName name="java.awt.image.BufferedImage"/>
     <fullyQualifiedTypeName name="javax.swing.JDialog"/>
     <fullyQualifiedTypeName name="javax.swing.JLabel"/>
@@ -60,4 +55,9 @@
     <fullyQualifiedTypeName name="java.nio.file.Files"/>
     <fullyQualifiedTypeName name="javax.swing.JOptionPane"/>
     <fullyQualifiedTypeName name="org.junit.Ignore"/>
+    <fullyQualifiedTypeName name="org.iMage.shutterpile.port.IFilter"/>
+    <fullyQualifiedTypeName name="org.iMage.shutterpile.impl.filters.WatermarkFilter"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.Executors"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.ExecutorService"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.CyclicBarrier"/>
 </qualifiedTypeNameHistroy>

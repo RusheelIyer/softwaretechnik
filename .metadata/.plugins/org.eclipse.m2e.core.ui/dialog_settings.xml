@@ -2,18 +2,13 @@
 <section name="Workbench">
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
-			<item value="swt1.ub4.a1"/>
 			<item value="swt1"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
-			<item value="iMage.iDeal"/>
+			<item value="iMage.shutterpile-parallel"/>
 			<item value="iMage"/>
-			<item value="iMage.bundle"/>
-			<item value="iMage.facezine-plugin"/>
-			<item value="iMage.shutterpile-cli"/>
-			<item value="iMage.shutterpile"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -47,15 +42,15 @@
 	</section>
 	<section name="org.eclipse.m2e.core.ui.internal.dialogs.EditDependencyDialog">
 		<item value="480" key="width"/>
-		<item value="1920" key="x"/>
+		<item value="1440" key="x"/>
 		<item value="301" key="y"/>
 		<item value="450" key="height"/>
 	</section>
 	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
 		<item value="480" key="width"/>
-		<item value="1920" key="x"/>
+		<item value="1440" key="x"/>
 		<item value="304" key="y"/>
-		<item value="489" key="height"/>
+		<item value="531" key="height"/>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
 		<list key="projectNameTemplate">
@@ -69,6 +64,7 @@
 	</section>
 	<section name="MavenModuleWizardParentPage">
 		<list key="moduleName">
+			<item value="iMage.shutterpile-parallel"/>
 			<item value="iMage.iDeal"/>
 			<item value="iMage.bundle"/>
 			<item value="iMage.facezine-plugin"/>
@@ -100,13 +96,13 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="org.iMage.iDeal"/>
+			<item value="org.iMage.shutterpile.parallel"/>
 		</list>
 		<list key="groupId">
 			<item value="swt1"/>
 		</list>
 		<list key="artifactId">
-			<item value="iMage.iDeal"/>
+			<item value="iMage.shutterpile-parallel"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
