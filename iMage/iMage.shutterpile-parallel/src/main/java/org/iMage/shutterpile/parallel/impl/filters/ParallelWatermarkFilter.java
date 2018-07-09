@@ -79,7 +79,7 @@ public class ParallelWatermarkFilter implements IFilter, Runnable {
 	@Override
 	public void run() {
 		
-		BufferedImage[][] images = new BufferedImage[this.watermarksPerRow][]
+		
 		
 	}
 
