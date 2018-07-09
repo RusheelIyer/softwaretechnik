@@ -1,4 +1,52 @@
 <changelog><commit>
+					<time>1531159141</time>
+					<sha1>5a25010ac62429454245761fc71fb6cc425a836e</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>created test  test cases for functinoal and non-functional requirements</msg>
+				</commit><commit>
+					<time>1530970355</time>
+					<sha1>9ec99040827ebea0944e252872587a0f1d880e3c</sha1>
+					<author>RusheelIyer</author>
+					<branches>refs/heads/master</branches>
+					<msg>git ignore modified</msg>
+				</commit><commit>
+					<time>1530970196</time>
+					<sha1>c3c3eced2747977c474c331c90274b7168169036</sha1>
+					<author>RusheelIyer</author>
+					<branches>refs/heads/master</branches>
+					<msg>added to gitignore</msg>
+				</commit><commit>
+					<time>1530959450</time>
+					<sha1>1149412f802c103494979294fdade9024499a3af</sha1>
+					<author>RusheelIyer</author>
+					<branches>refs/heads/master</branches>
+					<msg>merge</msg>
+				</commit><commit>
+					<time>1530811055</time>
+					<sha1>2e919009f74b49490a351930e38c882b6e029ac3</sha1>
+					<author>RusheelIyer</author>
+					<branches>refs/heads/master</branches>
+					<msg>created parallel watermark filter</msg>
+				</commit><commit>
+					<time>1529330628</time>
+					<sha1>eff6e10b7c7dbadf5726518a1d06ab9aef160725</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>implementation of the Text Watermark Supplier</msg>
+				</commit><commit>
+					<time>1529329927</time>
+					<sha1>38791f2554b4da3d2c454ff048a7164b0c6936e8</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>created the abstractwatermarksupplier template class</msg>
+				</commit><commit>
+					<time>1529328823</time>
+					<sha1>fb93ef98e94b5df3dab2003da6e2a1c7273d30b3</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>new Alpha Filter created to halve alpha values</msg>
+				</commit><commit>
 					<time>1528307662</time>
 					<sha1>c4b1719345a8d948f5560f85afeb53397981b017</sha1>
 					<author>Rusheel</author>
@@ -471,150 +519,150 @@
 					<time>1525178862</time>
 					<sha1>ed98e0360b1825967413b0cb912d7e353bea5afe</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 2i</msg>
 				</commit><commit>
 					<time>1525178699</time>
 					<sha1>073d90723f85666613b794391e8ab1e1a609abd9</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 2h</msg>
 				</commit><commit>
 					<time>1525178383</time>
 					<sha1>aa3bb60d3a101019971acfd6629377b8391a0fb7</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 2g</msg>
 				</commit><commit>
 					<time>1525178212</time>
 					<sha1>1981b59453e52d0e944aa7230c717b5531a00a75</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 2f</msg>
 				</commit><commit>
 					<time>1525178126</time>
 					<sha1>e6d76b8083078eb955683a4bebca1bb3c3655b18</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 2e</msg>
 				</commit><commit>
 					<time>1525178033</time>
 					<sha1>db741274f7cf1b0f4b837a05387f862ec696482e</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 2d</msg>
 				</commit><commit>
 					<time>1525177898</time>
 					<sha1>85eb5cdfc42b0153bda8ca2c0d1fcf1bb1d7eefd</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 2c</msg>
 				</commit><commit>
 					<time>1525177630</time>
 					<sha1>5b1f40b0ed779f295c0715e1dbf175f25d289265</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 2b</msg>
 				</commit><commit>
 					<time>1525163700</time>
 					<sha1>769db6b6c7853d019600969caf6e6be5807a7448</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1</msg>
 				</commit><commit>
 					<time>1525163622</time>
 					<sha1>eff6be9ac22db0a6d1ea8bad21dccb53c5addd8c</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Fixed File Structure</msg>
 				</commit><commit>
 					<time>1525163363</time>
 					<sha1>fc5f0a01846474507833b7f96b31b32e683c1da6</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1k. Checkstyle Error fixes. lines 127-129 in Class Generator, fixed the catch block bracket alignment</msg>
 				</commit><commit>
 					<time>1525163266</time>
 					<sha1>ef51e5d210661b270f41d3ccffa55ff8281097d9</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1i</msg>
 				</commit><commit>
 					<time>1525163117</time>
 					<sha1>5992a36c4dba54122253ddfb37f2c51bba92f74f</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>reverted to previous version</msg>
 				</commit><commit>
 					<time>1525162920</time>
 					<sha1>a5daf0b2a458611cfa0f184581056b78358e39a4</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>main class file name error</msg>
 				</commit><commit>
 					<time>1525162822</time>
 					<sha1>a929afe5d1205e7afd1292732717f14277842ab0</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>main class file name error</msg>
 				</commit><commit>
 					<time>1525162554</time>
 					<sha1>2396113269a4ec743dd84d984f50744fa4f3be7b</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Made Checkstyle changes in Generator class lines 127-129. Arrange catch block bracket alignment</msg>
 				</commit><commit>
 					<time>1525162400</time>
 					<sha1>7a51e2a77251ba1796b28e3296d0726c1f8698eb</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1j</msg>
 				</commit><commit>
 					<time>1525162285</time>
 					<sha1>825a7e0c8bb1278e9115dfd6865635dfdd08f6ba</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1i</msg>
 				</commit><commit>
 					<time>1525162102</time>
 					<sha1>22cd42e6099efd546fddcb35e25b8a3138662562</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1h</msg>
 				</commit><commit>
 					<time>1525161955</time>
 					<sha1>c5cceed45a45ff23eda6c8335d7c08125b1a1b5f</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1g</msg>
 				</commit><commit>
 					<time>1525161853</time>
 					<sha1>178edccc19ef5f6b7aa1a2c189be361c31b3dda5</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1f</msg>
 				</commit><commit>
 					<time>1525161730</time>
 					<sha1>b6da012eb4d834bdd79c555249fb0f58d74ccf45</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1d</msg>
 				</commit><commit>
 					<time>1525161676</time>
 					<sha1>0c11861ea7409dec5c007d88a045cc707ecff340</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1d</msg>
 				</commit><commit>
 					<time>1525161587</time>
 					<sha1>6942501f06c755be379055e9977677b2b53f5ee4</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1c</msg>
 				</commit><commit>
 					<time>1525161501</time>
 					<sha1>d6410b7989b6e110f3798b4464871ee6b3fc86b5</sha1>
 					<author>Rusheel</author>
-					<branches>refs/heads/master,refs/heads/RotateImageTest</branches>
+					<branches>refs/heads/master</branches>
 					<msg>Aufgabe 1b</msg>
 				</commit></changelog>

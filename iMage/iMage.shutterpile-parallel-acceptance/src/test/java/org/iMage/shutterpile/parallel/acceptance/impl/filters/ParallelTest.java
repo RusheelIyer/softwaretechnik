@@ -77,6 +77,9 @@ public class ParallelTest {
 	
 	/**
 	 * test functional requirement 20
+	 * 
+	 * 
+	 * Note: test fails, correction required
 	 */
 	@Test @Ignore
 	public void sequentialCompareTest() {
@@ -104,6 +107,9 @@ public class ParallelTest {
 	
 	/**
 	 * test non functional requirement 10
+	 * 
+	 * 
+	 * Note: test fails, correction required
 	 */
 	@Test @Ignore
 	public void sequentialTimeTest() {
