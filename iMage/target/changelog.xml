@@ -1,4 +1,16 @@
 <changelog><commit>
+					<time>1531208981</time>
+					<sha1>34c6c3ec052563c6879b371b38221f0523cecaec</sha1>
+					<author>RusheelIyer</author>
+					<branches>refs/heads/master</branches>
+					<msg>fixed errors in the test cases and added global variables</msg>
+				</commit><commit>
+					<time>1531159841</time>
+					<sha1>33cc329226f241d1ccab5fc41d4cf708ecdec350</sha1>
+					<author>Rusheel</author>
+					<branches>refs/heads/master</branches>
+					<msg>packaged maven project</msg>
+				</commit><commit>
 					<time>1531159141</time>
 					<sha1>5a25010ac62429454245761fc71fb6cc425a836e</sha1>
 					<author>Rusheel</author>
